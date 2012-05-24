@@ -1,0 +1,32 @@
+.uncompiled {
+	font-family : Osaka;
+	color : #7F007F;
+}
+.normal {
+	font-family : Osaka;
+	color : #000000;
+}
+.langKeyword {
+	font-family : Osaka;
+	color : #FF0000;
+}
+.appKeyword {
+	font-family : Osaka;
+	color : #0000FF;
+}
+.comment {
+	font-family : Osaka;
+	color : #4C4E4E;
+}
+.literal {
+	font-family : Osaka;
+	color : #000000;
+}
+.userDefine {
+	font-family : Osaka;
+	color : #407F00;
+}
+.stringLiteral {
+	font-family : Osaka;
+	color : #7F007F;
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>copy_with_opts</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link href="../assets/default.css" type="text/css" rel="stylesheet" media="all" />
+		<link href="../assets/handler_page.css" type="text/css" rel="stylesheet" media="all" />
+		<link href="../assets/applescript.css" type="text/css" rel="stylesheet" media="all" />
+		<meta name="keywords" content="copy_with_opts" />
+		<script type="text/javascript" src="../assets/run_helpscript.js"></script>
+	</head>
+
+	<body>
+		<div style="visibility:hidden"><a href="../../" id="HelpBookRoot"></a></div>
+		<div id="smartheader">
+			<table width="95%" border="0" cellspacing="2" cellpadding="0">
+				<tr>
+					<td align="left"><a href="../contents.html">XFile Reference</a></td>
+					<td align="right"><a onclick="return runHelpScript(this)" href="../assets/editScript.scpt">Edit Script</a></td>
+				</tr>
+			</table>
+		</div>
+<div class="elementTitle">
+<a id="copy_with_opts" name="copy_with_opts">copy_with_opts</a>
+</div>
+<p class="sourceCode">
+<span class="userDefine">copy_with_opts</span>(<span class="userDefine">a_destination</span>, <span class="userDefine">opts</span>)
+<a href="../assets/setClipboard.scpt" onclick="return runHelpScriptWithInnerText(this)">
+<img src="../assets/Clipboard24.png" alt="copy to clipboard" align="right" />
+</a></p>
+<p>Copy the item to specified location with options.</p>
+
+<p>By passing options (a value of a record) as a second parameter, you can change the behavior of copying. The format of the option record is {with_replaceing : boolean, with_admin:boolean, with_replacing: boolean}. You can ommit labels you don't required.</p>
+<ul>
+<li>with_replacing : Copying with replacing the destination. The default is true.</li>
+<li>with_admin : Copying with administrator privileges. The default is false.</li>
+<li>with_removing : Copying after removing the destination. The default is false.</li>
+</ul>
+
+<div class="subHeading">
+Parameters
+</div>
+<ul>
+<li>a_destination (script object) : 
+a XFile instance referencing the copy destination or a relative path.
+</li>
+<li>opts ( record): 
+a XFile instance referencing the copy destination
+</li>
+</ul>
+<div class="subHeading">
+Result
+</div>
+<p>script object : a XFile instance referencing copied item.</p>
+
+	</body>
+
+</html>

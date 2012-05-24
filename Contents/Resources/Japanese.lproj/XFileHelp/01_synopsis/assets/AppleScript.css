@@ -1,0 +1,44 @@
+.uncompiled {
+	font-family : Osaka;
+	color : #800080;
+}
+.normal {
+	font-family : Osaka;
+	color : #000000;
+}
+.langKeyword {
+	font-family : Osaka;
+	color : #FF0000;
+}
+.appKeyword {
+	font-family : Osaka;
+	color : #0000FF;
+}
+.comment {
+	font-family : Osaka;
+	color : #4C4E4E;
+}
+.literal {
+	font-family : Osaka;
+	color : #000000;
+}
+.userDefine {
+	font-family : Osaka;
+	color : #408000;
+}
+.reference {
+	font-family : Osaka;
+	color : #800080;
+}
+.sourceCode  {
+	position: relative;
+	font-family: sans-serif;
+	margin-right: 2em;
+	margin-left: 2em;
+	padding: 1ex;
+	border: solid 2px silver }
+.scriptButton {
+	position: absolute;
+	top : 0.5em;
+	right: 1em; 
+	text-align: right;}
