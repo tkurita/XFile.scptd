@@ -15,14 +15,14 @@ You should have received a copy of the GNU General Public License
 along with Foobar.  If not, see <http://www.gnu.org/licenses/> *)
 
 property name : "XFile"
-property version : "1.3.4b"
+property version : "1.4"
 
 property PathInfo : module
 
 
 (*!@title XFile Reference
 
-* Version : 1.3.4b
+* Version : 1.4
 * Author : Tetsuro KURITA ((<tkurita@mac.com>))
 
 @references
@@ -1039,6 +1039,35 @@ on list_children()
 	return list folder of as_furl()
 end list_children
 
+(*!
+@abstruct 
+<!--begin locale ja-->
+フォルダ内のファイル/フォルダを引数にしてスクリプトオブジェクトの do ハンドラを繰り返し実行します。
+<!--begin locale en-->
+Call do handler of given script object with each item in the folder as an argument.
+<!--end locale-->
+@description 
+<!--begin locale ja-->
+フォルダの参照を保持している XFile に対して実行できます。
+
+a_script は引数を一つだけとる do ハンドラを実装していなければなりません。
+do ハンドラには、フォルダ内の項目の XFile インスタンスが渡されます。
+do ハンドラの返り値は true もしくは false である必要があります。do ハンドラが false を 返すと処理を中止します。
+
+<!--begin locale en-->
+each handler can peform for a XFile instance referencing a folder.
+
+a_script must have a &quot;do&quot; handler which require only argument. 
+Each XFile instance in the target folder is passed to the &quot;do&quot; handler.
+The do handler must return true or false. When the do handler return false, the process is stoped immediately.
+<!--end locale-->
+@param
+<!--begin locale ja-->
+a_script(スクリプトオブジェクト) : 引数を一つだけとる do ハンドラを持っている必要があります。 do ハンドラは真偽値を返さなくてはなりません。
+<!--begin locale en-->
+a_script(script object) : must have a do handler which require only argument. The do handler must return boolean.
+<!--end locale-->
+*)
 on each(a_script)
 	set a_list to list_children()
 	script ListWrapper
