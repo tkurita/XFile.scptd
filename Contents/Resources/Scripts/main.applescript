@@ -1,4 +1,4 @@
-(* Copyright (C) 2007, 2008, 2009, 2010.2011 Tetsuro KURITA
+(* Copyright (C) 2007, 2008, 2009, 2010, 2011, 2012 Tetsuro KURITA
 
 
 This program is free software: you can redistribute it and/or modify
@@ -226,6 +226,14 @@ on posix_path()
 	return my _pathInfo's posix_path()
 end posix_path
 
+(*!@abstruct
+<!-- begin locale ja -->
+パス文字列の最後の"/"を削除した POSIX パスを取得します。
+<!-- begin locale en -->
+Obtain POSIX path which does not end with "/".
+<!-- end locale -->
+@result text
+*)
 on normalized_posix_path()
 	return my _pathInfo's normalized_posix_path()
 end normalized_posix_path

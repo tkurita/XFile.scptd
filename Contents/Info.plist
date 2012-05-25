@@ -19,7 +19,7 @@
 	<key>WindowState</key>
 	<dict>
 		<key>dividerCollapsed</key>
-		<false/>
+		<true/>
 		<key>eventLogLevel</key>
 		<integer>-1</integer>
 		<key>name</key>
