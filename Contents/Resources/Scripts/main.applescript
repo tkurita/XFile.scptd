@@ -501,9 +501,11 @@ Check whether the item referenced by the instance exists or not.
 <!-- begin locale ja -->
 内部のファイル参照をエイリアスに変換します。すでにエイリアス形式の参照を保持している場合でも、エイリアスを再構築します。
 
-通常、エイリアスはファイルの移動、ファイル名の変更を追跡することができますが、別のファイルで上書きされると追跡できなくなります。そのようなとき、item_exits() を実行してエイリアスを再構築してください。
+通常、エイリアスはファイルの移動、ファイル名の変更を追跡することができますが、別のファイルで上書きされると追跡できなくなります。
+そのようなとき、item_exists() を実行してエイリアスを再構築してください。
 <!-- begin locale en -->
-A file reference stored in a instance is converted to alias class. Even if the class of the inner file reference already has been alias, the alias is reconstructed.
+A file reference stored in a instance is converted to alias class.
+Even if the class of the inner file reference already has been alias, the alias is reconstructed.
 <!-- end locale -->
 @result 
 <!-- begin locale ja -->
@@ -524,9 +526,9 @@ Check whether the item referenced by the instance exists or not.
 <!-- end locale -->
 @description
 <!-- begin locale ja -->
-((<item_exits>)) とは違って、内部のファイル参照は更新されません。
+((<item_exists>)) とは違って、内部のファイル参照は更新されません。
 <!-- begin locale en -->
-The internal file reference will not be changed unlike ((<item_exits>).
+The internal file reference will not be changed unlike ((<item_exists>).
 <!-- end locale -->
 @result 
 <!-- begin locale ja -->
