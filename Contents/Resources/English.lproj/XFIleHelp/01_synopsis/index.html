@@ -1,18 +1,177 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-	<head>
-		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<meta content="noindex" name="robots" />
-		<title>XFile Help</title>
-	</head>
+  <!-- InstanceBegin template="../../../../../_Templates/helpbook-page-with-applescript.dwt" -->
 
-	<frameset cols="230,9,*" border="0" frameborder="no" framespacing="0">
-		<frame name="TOC" src="toc.html" noresize="noresize" />
-		<frame name="Shadow" src="../pages/shadow.html" noresize="noresize" scrolling="no" />
-		<frame name="Content" src="contents.html" />
-	</frameset>
+    <head>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+      <title>Synopsis</title>
+      <meta name="keywords" content="XFile, AppleScript" />
+            
+      <meta name="description" content="XFile provids object orientied file references and operations." />
+      <!-- #BeginHeadLocked "" -->
+        <link href="assets/helpbook-default.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="assets/helpbook-navibar.css" type="text/css" rel="stylesheet" media="all" />
+      <link href="assets/AppleScript.css" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="assets/navibar-jump.js"></script>
+        <link id="helpviewer-handler-helper" href="assets/helpviewer-handler-helper.scpt" />
+        <script type="text/javascript" src="assets/helpviewer-handler-enable.js"></script>
+      <!-- #EndHeadLocked -->
+    </head>
+
+    <body>
+      <!-- InstanceBeginEditable name="navi-bar" --><div id="navi-bar"><span class="navibar-item"><a href="../index.html">XFile Help</a></span><span class="navibar-item">Synopsis</span><select onchange="navibarJump(this)"><option value="">§</option>
+    <option value="#what">What ?</option>
+    <option value="#sample">Sample</option></select></div>
+<div class="prev-next-item"><a href="../02_reference/index.html"><span class="navibar-next">XFile Reference</span></a></div><!-- InstanceEndEditable -->
+      <div id="contents">
+        <!-- InstanceBeginEditable name="Body" -->
+          <h1>XFile</h1>
+          <h2><a id="what" name="what"></a>What ?</h2>
+          
+          <p>XFile is a module of AppleScript to provides unified object oriented interface to file operation (moving, removing, getting attributes and so on).</p>
+          <p>Functions of file operations of AppleScript world is given by Scripting Additions, Finder, System Events and shell commands. Functions are distributed and cumbersome. XFile wraps these components and introduces a file object for unified object oriented interface.</p>
+          
+          <h2><a id="sample" name="sample"></a>Sample</h2>
+          <csobj csref="../../../../XDict/_Components/sample-code.html" occur="5" t="Component">
+            <div class="sourceCode">
+              <div>
+                <span class="langKeyword">property</span> <span class="userDefine">XDict</span><span class="normal"> : </span><span class="additionCommandName">module</span></div>
+              <br />
+              <div>
+                <span class="additionCommandName">boot</span><span class="normal"> (</span><span class="additionCommandName">module loader</span><span class="normal">) </span><span class="additionCommandName">for</span> <span class="langKeyword">me</span></div>
+              <br />
+              <div>
+                <span class="comment">(*== Make Instances ==*)</span></div>
+              <div>
+                <span class="langKeyword">set</span> <span class="userDefine">empty_dict</span> <span class="langKeyword">to</span> <span class="commandName">make</span> <span class="userDefine">XDict</span></div>
+              <div>
+                <span class="langKeyword">set</span> <span class="userDefine">a_dict</span> <span class="langKeyword">to</span> <span class="userDefine">XDict</span><span class="normal">'s </span><span class="userDefine">make_with_lists</span><span class="normal">({&quot;key1&quot;, &quot;key2&quot;}, {&quot;value1&quot;, &quot;value2&quot;})</span></div>
+              <div>
+                <span class="langKeyword">set</span> <span class="userDefine">a_dict</span> <span class="langKeyword">to</span> <span class="userDefine">XDict</span><span class="normal">'s </span><span class="userDefine">make_with_pairs</span><span class="normal">({{&quot;key1&quot;, &quot;value1&quot;}, {&quot;key2&quot;, &quot;value2&quot;}})</span></div>
+              <br />
+              <div>
+                <span class="comment">(*== obtain value ==*)</span></div>
+              <div>
+                <span class="commandName">log</span> <span class="userDefine">a_dict</span><span class="normal">'s </span><span class="userDefine">value_for_key</span><span class="normal">(&quot;key1&quot;)</span></div>
+              <div>
+                <span class="comment">--result : &quot;value1&quot;</span></div>
+              <div>
+                <span class="langKeyword">try</span></div>
+              <div style="text-indent:4ex;">
+                <span class="userDefine">a_dict</span><span class="normal">'s </span><span class="userDefine">value_for_key</span><span class="normal">(&quot;key3&quot;)</span></div>
+              <div>
+                <span class="langKeyword">on</span> <span class="langKeyword">error</span> <span class="appKeyword">number</span><span class="normal"> 900</span></div>
+              <div style="text-indent:4ex;">
+                <span class="commandName">log</span><span class="normal"> &quot;No value associated with key3&quot;</span></div>
+              <div>
+                <span class="langKeyword">end</span> <span class="langKeyword">try</span></div>
+              <br />
+              <div>
+                <span class="comment">(*== Reverse Search ==*)</span></div>
+              <div>
+                <span class="commandName">log</span> <span class="userDefine">a_dict</span><span class="normal">'s </span><span class="userDefine">key_for_value</span><span class="normal">(&quot;value2&quot;) </span><span class="comment">-- result : &quot;key2&quot;</span></div>
+              <br />
+              <div>
+                <span class="comment">(*== Non string values can be used as keys ==*)</span></div>
+              <div>
+                <span class="langKeyword">script</span> <span class="userDefine">scriptA</span></div>
+              <div>
+                <span class="langKeyword">end</span> <span class="langKeyword">script</span></div>
+              <br />
+              <div>
+                <span class="langKeyword">script</span> <span class="userDefine">scriptB</span></div>
+              <div>
+                <span class="langKeyword">end</span> <span class="langKeyword">script</span></div>
+              <br />
+              <div>
+                <span class="userDefine">a_dict</span><span class="normal">'s </span><span class="userDefine">set_value</span><span class="normal">(</span><span class="userDefine">scriptA</span><span class="normal">, &quot;value3&quot;)</span></div>
+              <div>
+                <span class="commandName">log</span> <span class="userDefine">a_dict</span><span class="normal">'s </span><span class="userDefine">value_for_key</span><span class="normal">(</span><span class="userDefine">scriptA</span><span class="normal">) </span><span class="comment">--result : &quot;value3&quot;</span></div>
+              <div>
+                <span class="langKeyword">try</span></div>
+              <div style="text-indent:4ex;">
+                <span class="userDefine">a_dict</span><span class="normal">'s </span><span class="userDefine">value_for_key</span><span class="normal">(</span><span class="userDefine">scriptB</span><span class="normal">)</span></div>
+              <div>
+                <span class="langKeyword">on</span> <span class="langKeyword">error</span> <span class="appKeyword">number</span><span class="normal"> 900</span></div>
+              <div style="text-indent:4ex;">
+                <span class="commandName">log</span><span class="normal"> &quot;No value associated with scriptB&quot;</span></div>
+              <div>
+                <span class="langKeyword">end</span> <span class="langKeyword">try</span></div>
+              <br />
+              <div>
+                <span class="comment">(*== Iterator ==*)</span></div>
+              <div>
+                <span class="langKeyword">set</span> <span class="userDefine">dict_iterator</span> <span class="langKeyword">to</span> <span class="userDefine">a_dict</span><span class="normal">'s </span><span class="userDefine">iterator</span><span class="normal">()</span></div>
+              <div>
+                <span class="langKeyword">repeat</span> <span class="langKeyword">while</span> <span class="userDefine">dict_iterator</span><span class="normal">'s </span><span class="userDefine">has_next</span><span class="normal">()</span></div>
+              <div style="text-indent:4ex;">
+                <span class="langKeyword">set</span><span class="normal"> {</span><span class="userDefine">a_key</span><span class="normal">, </span><span class="userDefine">a_value</span><span class="normal">} </span><span class="langKeyword">to</span> <span class="userDefine">dict_iterator</span><span class="normal">'s </span><span class="userDefine">next</span><span class="normal">()</span></div>
+              <div>
+                <span class="langKeyword">end</span> <span class="langKeyword">repeat</span></div>
+              <br />
+              <div>
+                <span class="comment">(*== Loop with a Script Object ==*)</span></div>
+              <div>
+                <span class="langKeyword">script</span> <span class="userDefine">DictScanner</span></div>
+              <div style="text-indent:4ex;">
+                <span class="langKeyword">on</span> <span class="userDefine">do</span><span class="normal">({</span><span class="userDefine">a_key</span><span class="normal">, </span><span class="userDefine">a_value</span><span class="normal">})</span></div>
+              <div style="text-indent:8ex;">
+                <span class="commandName">log</span> <span class="userDefine">a_key</span></div>
+              <div style="text-indent:8ex;">
+                <span class="commandName">log</span> <span class="userDefine">a_value</span></div>
+              <div style="text-indent:8ex;">
+                <span class="langKeyword">return</span> <span class="enumeratedValues">true</span></div>
+              <div style="text-indent:4ex;">
+                <span class="langKeyword">end</span> <span class="userDefine">do</span></div>
+              <div>
+                <span class="langKeyword">end</span> <span class="langKeyword">script</span></div>
+              <br />
+              <div>
+                <span class="userDefine">a_dict</span><span class="normal">'s </span><span class="userDefine">each</span><span class="normal">(</span><span class="userDefine">DictScanner</span><span class="normal">)</span></div>
+              <br />
+              <div>
+                <span class="langKeyword">script</span> <span class="userDefine">ValueExtractor</span></div>
+              <div style="text-indent:4ex;">
+                <span class="langKeyword">on</span> <span class="userDefine">do</span><span class="normal">({</span><span class="userDefine">a_key</span><span class="normal">, </span><span class="userDefine">a_value</span><span class="normal">})</span></div>
+              <div style="text-indent:8ex;">
+                <span class="langKeyword">return</span> <span class="userDefine">a_value</span></div>
+              <div style="text-indent:4ex;">
+                <span class="langKeyword">end</span> <span class="userDefine">do</span></div>
+              <div>
+                <span class="langKeyword">end</span> <span class="langKeyword">script</span></div>
+              <br />
+              <div>
+                <span class="langKeyword">set</span> <span class="userDefine">a_xlist</span> <span class="langKeyword">to</span> <span class="userDefine">a_dict</span><span class="normal">'s </span><span class="userDefine">map</span><span class="normal">(</span><span class="userDefine">ValueExtractor</span><span class="normal">)</span></div>
+              <br />
+              <div>
+                <span class="comment">(*== Dump the Contents for Debugging ==*)</span></div>
+              <div>
+                <span class="commandName">log</span> <span class="userDefine">a_dict</span><span class="normal">'s </span><span class="userDefine">remove_for_key</span><span class="normal">(</span><span class="userDefine">scriptA</span><span class="normal">) </span><span class="comment">-- result : true</span></div>
+              <div>
+                <span class="userDefine">a_dict</span><span class="normal">'s </span><span class="userDefine">dump</span><span class="normal">()</span></div>
+              <div>
+                <span class="comment">(* result :</span></div>
+              <div>
+                <span class="comment">&quot;key1	-&gt;	value1</span></div>
+              <div>
+                <span class="comment">key2	-&gt;	value2</span></div>
+              <div>
+                <span class="comment">&quot;</span></div>
+              <div>
+                <span class="comment">*)</span></div>
+              <div class="scriptButton">
+                <input type="button" value="sample" onclick="document.location = this.src" src="applescript://com.apple.scripteditor?action=new%26script=property%20XDict%20:%20module%0D%0Dboot%20(module%20loader)%20for%20me%0D%0D(*==%20Make%20Instances%20==*)%0Dset%20empty_dict%20to%20make%20XDict%0Dset%20a_dict%20to%20XDict%27s%20make_with_lists(%7B%22key1%22,%20%22key2%22%7D,%20%7B%22value1%22,%20%22value2%22%7D)%0Dset%20a_dict%20to%20XDict%27s%20make_with_pairs(%7B%7B%22key1%22,%20%22value1%22%7D,%20%7B%22key2%22,%20%22value2%22%7D%7D)%0D%0D(*==%20obtain%20value%20==*)%0Dlog%20a_dict%27s%20value_for_key(%22key1%22)%0D--result%20:%20%22value1%22%0Dtry%0D%09a_dict%27s%20value_for_key(%22key3%22)%0Don%20error%20number%20900%0D%09log%20%22No%20value%20associated%20with%20key3%22%0Dend%20try%0D%0D(*==%20Reverse%20Search%20==*)%0Dlog%20a_dict%27s%20key_for_value(%22value2%22)%20--%20result%20:%20%22key2%22%0D%0D(*==%20Non%20string%20values%20can%20be%20used%20as%20keys%20==*)%0Dscript%20scriptA%0Dend%20script%0D%0Dscript%20scriptB%0Dend%20script%0D%0Da_dict%27s%20set_value(scriptA,%20%22value3%22)%0Dlog%20a_dict%27s%20value_for_key(scriptA)%20--result%20:%20%22value3%22%0Dtry%0D%09a_dict%27s%20value_for_key(scriptB)%0Don%20error%20number%20900%0D%09log%20%22No%20value%20associated%20with%20scriptB%22%0Dend%20try%0D%0D(*==%20Iterator%20==*)%0Dset%20dict_iterator%20to%20a_dict%27s%20iterator()%0Drepeat%20while%20dict_iterator%27s%20has_next()%0D%09set%20%7Ba_key,%20a_value%7D%20to%20dict_iterator%27s%20next()%0Dend%20repeat%0D%0D(*==%20Loop%20with%20a%20Script%20Object%20==*)%0Dscript%20DictScanner%0D%09on%20do(%7Ba_key,%20a_value%7D)%0D%09%09log%20a_key%0D%09%09log%20a_value%0D%09%09return%20true%0D%09end%20do%0Dend%20script%0D%0Da_dict%27s%20each(DictScanner)%0D%0Dscript%20ValueExtractor%0D%09on%20do(%7Ba_key,%20a_value%7D)%0D%09%09return%20a_value%0D%09end%20do%0Dend%20script%0D%0Dset%20a_xlist%20to%20a_dict%27s%20map(ValueExtractor)%0D%0D(*==%20Dump%20the%20Contents%20for%20Debugging%20==*)%0Dlog%20a_dict%27s%20remove_for_key(scriptA)%20--%20result%20:%20true%0Da_dict%27s%20dump()%0D(*%20result%20:%0A%22key1%09-%3E%09value1%0Akey2%09-%3E%09value2%0A%22%0A*)%0D" /></div>
+            </div>
+          </csobj>
+        <!-- InstanceEndEditable --></div>
+      <!-- InstanceBeginEditable name="prev-next-item" --><div class="prev-next-item"><a href="../02_reference/index.html"><span class="navibar-next">XFile Reference</span></a></div><!-- InstanceEndEditable -->
+      <div class="footer">
+        <p>This page was last built on <csobj format="MedDate" h="10" region="0" t="DateTime" w="71">Sat, May 26, 2012</csobj> ; <csobj format="LongTime" h="10" region="0" t="DateTime" w="45">9:23:39 PM</csobj> . Thanks for checking it out!</p>
+      </div>
+    </body>
+
+  <!-- InstanceEnd -->
 
 </html>

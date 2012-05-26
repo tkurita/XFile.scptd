@@ -1,18 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-	<head>
-		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<meta content="noindex" name="robots" />
-		<title>XFile Help</title>
-	</head>
+  <!-- InstanceBegin template="../../../../../_Templates/helpbook-page.dwt" -->
 
-	<frameset cols="230,9,*" border="0" frameborder="no" framespacing="0">
-		<frame name="TOC" src="../toc.html" noresize="noresize" />
-		<frame name="Shadow" src="../pages/shadow.html" noresize="noresize" scrolling="no" />
-		<frame name="Content" src="contents.html" />
-	</frameset>
+    <head>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+      <title>History</title>
+      <meta name="keywords" content="XFile, History, 更新履歴" />
+      
+      <meta name="description" content="News and Fixes" />
+      
+      <!-- #BeginHeadLocked "" -->
+        <link href="../01_synopsis/assets/helpbook-default.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="../01_synopsis/assets/helpbook-navibar.css" type="text/css" rel="stylesheet" media="all" />
+        <script type="text/javascript" src="../01_synopsis/assets/navibar-jump.js"></script>
+      <!-- #EndHeadLocked -->
+    </head>
+
+    <body>
+      <!-- InstanceBeginEditable name="navi-bar" --><div id="navi-bar"><span class="navibar-item"><a href="../index.html">XFile Help</a></span><span class="navibar-item">History</span></div>
+<div class="prev-next-item"><a href="../02_reference/index.html"><span class="navibar-prev">XFile Reference</span></a></div><!-- InstanceEndEditable -->
+      <div id="contents">
+        <!-- InstanceBeginEditable name="Body" -->
+          <h1>History</h1>
+          <csobj csref="../../../_Components/history-en.html" occur="97" t="Component">
+            <ul>
+              <li>1.4 -- 2012-05-26
+                <ul>
+                  <li>Added &quot;normalized_posix_path&quot;.</li>
+                  <li>Added &quot;item_exists_without_update&quot;.</li>
+                  <li>Added &quot;each&quot;.</li>
+                </ul>
+              </li>
+              <li>1.3.3 -- 2011-02-10
+                <ul>
+                  <li>Fixed resolve_alias().</li>
+                  <li>Fixed is_folder(). Use a result of info for command.</li>
+                </ul>
+              </li>
+              <li>1.3.2 -- 2010-09-09
+                <ul>
+                  <li>Refixed unique_child() for a name without including path extenstion.</li>
+                </ul>
+              </li>
+              <li>1.3.1 -- 2010-06-16
+                <ul>
+                  <li>Fixed unique_child() for the instance created from a HFS path.</li>
+                  <li>Fixed unique_child() for a name without including path extenstion.</li>
+                </ul>
+              </li>
+              <li>1.3 -- 2010-03-25
+                <ul>
+                  <li>ModuleLoader is needed to load XFile.</li>
+                  <li>Using PathInfo instead of PathAnalyzer.</li>
+                  <li>Removed dependency on ShowHelpBook.</li>
+                  <li>make_with() accepts POSIX pathes.</li>
+                  <li>Added make_with_pathinfo().</li>
+                  <li>Removed make_with_record().</li>
+                  <li>Removed folder_name.</li>
+                  <li>A POSX path must be passed to child(), make_folder(), make_path() instead of a HFS path.</li>
+                  <li>Added copy_with_opts().</li>
+                  <li>copy_to and copy_with_opts can accept a relative path as a destination.</li>
+                  <li>Added as_furl().</li>
+                  <li>make_path() have an argument.</li>
+                </ul>
+              </li>
+              <li>1.2.2 -- 2009-11-09
+                <ul>
+                  <li>remove() will return a reviever instance.</li>
+                  <li>copy_to will preserve file attirbutes(e.g. modification/creation date, etc).</li>
+                </ul>
+              </li>
+              <li>1.2.1 -- 2009-03-09
+                <ul>
+                  <li>Fix Japanese manual can't displayed in Help Viewer.</li>
+                </ul>
+              </li>
+              <li>1.2 -- 2009-02-18
+                <ul>
+                  <li>Improve unique_child() in Mac OS X 10.5</li>
+                  <li>Remove dependency on UniqueNamer.</li>
+                </ul>
+              </li>
+              <li>1.1.2 -- 2009-01-29
+                <ul>
+                  <li>item_exists() cause to reconstruct the inner file reference of alias class.</li>
+                </ul>
+              </li>
+              <li>1.1.1 -- 2008-11-03
+                <ul>
+                  <li>item_exists() always access filesystem to check existantce.</li>
+                  <li>Improve compatibility with Mac OS X 10.5 with PathAnalyzer 1.7.1.</li>
+                </ul>
+              </li>
+              <li>1.1 -- 2008-03-20
+                <ul>
+                  <li>reimplement move_to method using mv command.</li>
+                  <li>move_to method returns a boolean value.</li>
+                  <li>fix mistakes in the manual.</li>
+                </ul>
+              </li>
+              <li>1.0 -- 2007.08.15
+                <ul>
+                  <li>First release</li>
+                </ul>
+              </li>
+            </ul>
+          </csobj><!-- InstanceEndEditable --></div>
+      <!-- InstanceBeginEditable name="prev-next-item" --><div class="prev-next-item"><a href="../02_reference/index.html"><span class="navibar-prev">XFile Reference</span></a></div><!-- InstanceEndEditable -->
+      <div class="footer">
+        <p>This page was last built on <csobj format="MedDate" h="10" region="0" t="DateTime" w="71">Sat, May 26, 2012</csobj> ; <csobj format="LongTime" h="10" region="0" t="DateTime" w="51">12:08:48 AM</csobj> . Thanks for checking it out!</p>
+      </div>
+    </body>
+
+  <!-- InstanceEnd -->
 
 </html>

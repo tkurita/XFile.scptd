@@ -9,25 +9,26 @@
 		<link href="../assets/default.css" type="text/css" rel="stylesheet" media="all" />
 		<link href="../assets/handler_page.css" type="text/css" rel="stylesheet" media="all" />
 		<link href="../assets/applescript.css" type="text/css" rel="stylesheet" media="all" />
-		<meta name="keywords" content="write_as_utf8" />
+		<meta name="keywords" content="write_as_utf8, XFile" />
 		<script type="text/javascript" src="../assets/run_helpscript.js"></script>
+		<link href="../../" id="HelpBookRoot" />
 	</head>
 
 	<body>
-		<div style="visibility:hidden"><a href="../../" id="HelpBookRoot"></a></div>
-		<div id="smartheader">
-			<table width="95%" border="0" cellspacing="2" cellpadding="0">
-				<tr>
-					<td align="left"><a href="../contents.html">XFile Reference</a></td>
-					<td align="right"><a onclick="return runHelpScript(this)" href="../assets/editScript.scpt">Edit Script</a></td>
-				</tr>
-			</table>
+		<div id="navi-bar">
+			<div class="to-root">
+			<a href="../index.html">XFile Reference</a>
+			</div>
+			<div class="edit-script-link">
+			<a onclick="return runHelpScript(this)" href="../assets/editScript.scpt">Edit Script</a>
+			</div>
 		</div>
-<div class="elementTitle">
+		<div id="contents">
+		<div class="elementTitle">
 <a id="write_as_utf8" name="write_as_utf8">write_as_utf8</a>
 </div>
 <p class="sourceCode">
-<span class="userDefine">write_as_utf8</span>(<span class="userDefine">a_data</span>)
+<span class="userDefine">write_as_utf8</span><span class="normal">(</span><span class="userDefine">a_data</span><span class="normal">)</span>
 <a href="../assets/setClipboard.scpt" onclick="return runHelpScriptWithInnerText(this)">
 <img src="../assets/Clipboard24.png" alt="copy to clipboard" align="right" />
 </a></p>
@@ -41,6 +42,7 @@ Parameters
 ファイルに書き込むデータ
 </li>
 </ul>
+		</div>
 	</body>
 
 </html>

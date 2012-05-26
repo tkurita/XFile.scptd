@@ -1,4 +1,5 @@
 .sourceCode  {	font-family: sans-serif;
+	min-height: 3.5ex;
 	margin-right: 2em;
 	margin-left: 2em;
 	padding: 1ex;
@@ -13,20 +14,3 @@
 .subHeading {
 	font-weight: bold;
 	font-size: 120%  }
-#smartheader {
-	background-color: #f2f2f2;
-	position: fixed;
-	margin-top: 0;
-	margin-right: 0;
-	margin-left: 0;
-	padding-left: 10px;
-	border-bottom: 1px solid #bfbfbf;
-	top: 0;
-	left: 0;
-	width: 100%  ; }
-body {
-	color: black;
-	font-size: 12px;
-	font-family: Osaka, "Lucida Grande", Arial, sans-serif;
-	background-color: white   ;
-	padding-top: 24px; }

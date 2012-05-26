@@ -9,29 +9,32 @@
 		<link href="../assets/default.css" type="text/css" rel="stylesheet" media="all" />
 		<link href="../assets/handler_page.css" type="text/css" rel="stylesheet" media="all" />
 		<link href="../assets/applescript.css" type="text/css" rel="stylesheet" media="all" />
-		<meta name="keywords" content="bundle_resource" />
+		<meta name="keywords" content="bundle_resource, XFile" />
 		<script type="text/javascript" src="../assets/run_helpscript.js"></script>
+		<link href="../../" id="HelpBookRoot" />
 	</head>
 
 	<body>
-		<div style="visibility:hidden"><a href="../../" id="HelpBookRoot"></a></div>
-		<div id="smartheader">
-			<table width="95%" border="0" cellspacing="2" cellpadding="0">
-				<tr>
-					<td align="left"><a href="../contents.html">XFile Reference</a></td>
-					<td align="right"><a onclick="return runHelpScript(this)" href="../assets/editScript.scpt">Edit Script</a></td>
-				</tr>
-			</table>
+		<div id="navi-bar">
+			<div class="to-root">
+			<a href="../index.html">XFile Reference</a>
+			</div>
+			<div class="edit-script-link">
+			<a onclick="return runHelpScript(this)" href="../assets/editScript.scpt">Edit Script</a>
+			</div>
 		</div>
-<div class="elementTitle">
+		<div id="contents">
+		<div class="elementTitle">
 <a id="bundle_resource" name="bundle_resource">bundle_resource</a>
 </div>
 <p class="sourceCode">
-<span class="userDefine">bundle_resource</span>(<span class="userDefine">resource_name</span>)
+<span class="userDefine">bundle_resource</span><span class="normal">(</span><span class="userDefine">resource_name</span><span class="normal">)</span>
 <a href="../assets/setClipboard.scpt" onclick="return runHelpScriptWithInnerText(this)">
 <img src="../assets/Clipboard24.png" alt="copy to clipboard" align="right" />
 </a></p>
 <p>Obtain an item which is in the bundle resource folder.</p>
+
+
 
 <p>This method can be call to a bundle.</p>
 
@@ -47,6 +50,7 @@ a resource name
 Result
 </div>
 <p>script object : a XFile instance</p>
+		</div>
 	</body>
 
 </html>

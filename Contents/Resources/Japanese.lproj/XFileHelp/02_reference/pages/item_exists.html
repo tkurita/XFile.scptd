@@ -9,38 +9,42 @@
 		<link href="../assets/default.css" type="text/css" rel="stylesheet" media="all" />
 		<link href="../assets/handler_page.css" type="text/css" rel="stylesheet" media="all" />
 		<link href="../assets/applescript.css" type="text/css" rel="stylesheet" media="all" />
-		<meta name="keywords" content="item_exists" />
+		<meta name="keywords" content="item_exists, XFile" />
 		<script type="text/javascript" src="../assets/run_helpscript.js"></script>
+		<link href="../../" id="HelpBookRoot" />
 	</head>
 
 	<body>
-		<div style="visibility:hidden"><a href="../../" id="HelpBookRoot"></a></div>
-		<div id="smartheader">
-			<table width="95%" border="0" cellspacing="2" cellpadding="0">
-				<tr>
-					<td align="left"><a href="../contents.html">XFile Reference</a></td>
-					<td align="right"><a onclick="return runHelpScript(this)" href="../assets/editScript.scpt">Edit Script</a></td>
-				</tr>
-			</table>
+		<div id="navi-bar">
+			<div class="to-root">
+			<a href="../index.html">XFile Reference</a>
+			</div>
+			<div class="edit-script-link">
+			<a onclick="return runHelpScript(this)" href="../assets/editScript.scpt">Edit Script</a>
+			</div>
 		</div>
-<div class="elementTitle">
+		<div id="contents">
+		<div class="elementTitle">
 <a id="item_exists" name="item_exists">item_exists</a>
 </div>
 <p class="sourceCode">
-<span class="userDefine">item_exists</span>()
+<span class="userDefine">item_exists</span><span class="normal">()</span>
 <a href="../assets/setClipboard.scpt" onclick="return runHelpScriptWithInnerText(this)">
 <img src="../assets/Clipboard24.png" alt="copy to clipboard" align="right" />
 </a></p>
 <p>参照しているファイル/フォルダが存在するかどうか調べます。</p>
 
-<p>内部で変換しているファイル参照をエイリアスに変換します。すでにエイリアス形式の参照を保持している場合でも、エイリアスを再構築します。</p>
-<p>通常、エイリアスはファイルの移動、ファイル名の変更を追跡することができますが、別のファイルで上書きされると追跡できなくなります。そのようなとき、item_exits() を実行してエイリアスを再構築してください。</p>
+
+
+<p>内部のファイル参照をエイリアスに変換します。すでにエイリアス形式の参照を保持している場合でも、エイリアスを再構築します。</p>
+<p>通常、エイリアスはファイルの移動、ファイル名の変更を追跡することができますが、別のファイルで上書きされると追跡できなくなります。そのようなとき、item_exists() を実行してエイリアスを再構築してください。</p>
 
 <div class="subHeading">
 Result
 </div>
 <p>boolean : 存在するのであれば true</p>
 
+		</div>
 	</body>
 
 </html>
