@@ -1,18 +1,328 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 	<head>
+		<title>XFile Reference</title>
+		
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<meta content="noindex" name="robots" />
-		<title>XFile Help</title>
+		<link href="assets/default.css" type="text/css" rel="stylesheet" media="all" />
+		<meta name="keywords" content="XFile, AppleScript" />
+		<script type="text/javascript" src="assets/run_helpscript.js"></script>
+		<script type="text/javascript" src="assets/navibar-jump.js"></script>
+		<link href="../" id="HelpBookRoot" />
 	</head>
 
-	<frameset cols="230,9,*" border="0" frameborder="no" framespacing="0">
-		<frame name="TOC" src="toc.html" noresize="noresize" />
-		<frame name="Shadow" src="../pages/shadow.html" noresize="noresize" scrolling="no" />
-		<frame name="Content" src="contents.html" />
-	</frameset>
+	<body>
+		<div id="navi-bar">
+			<div class="to-root">
+				<!-- InstanceBeginEditable name="to-root" --><a href="../index.html">XFile Help</a><!-- InstanceEndEditable -->
+			</div>
+			<select onchange="navibarJump(this)">
+<option value="">
+§
+</option>
+<option value="#Constractors">
+Constractors
+</option>
+<option value="#make_with">
+- make_with
+</option>
+<option value="#make_with_pathinfo">
+- make_with_pathinfo
+</option>
+<option value="#Make_a_New_Instance_with_Changing_Contents_of_an_Instance">
+Make a New Instance with Changing Contents of an Instance
+</option>
+<option value="#change_name">
+- change_name
+</option>
+<option value="#change_folder">
+- change_folder
+</option>
+<option value="#change_path_extension">
+- change_path_extension
+</option>
+<option value="#Getting_a_File_Reference_form_an_Instance">
+Getting a File Reference form an Instance
+</option>
+<option value="#as_alias">
+- as_alias
+</option>
+<option value="#as_furl">
+- as_furl
+</option>
+<option value="#hfs_path">
+- hfs_path
+</option>
+<option value="#posix_path">
+- posix_path
+</option>
+<option value="#normalized_posix_path">
+- normalized_posix_path
+</option>
+<option value="#Working_with_Attributes">
+Working with Attributes
+</option>
+<option value="#is_folder">
+- is_folder
+</option>
+<option value="#is_package">
+- is_package
+</option>
+<option value="#is_alias">
+- is_alias
+</option>
+<option value="#is_visible">
+- is_visible
+</option>
+<option value="#set_types">
+- set_types
+</option>
+<option value="#info">
+- info
+</option>
+<option value="#re_info">
+- re_info
+</option>
+<option value="#Obtain_Path_Infomation">
+Obtain Path Infomation
+</option>
+<option value="#item_name">
+- item_name
+</option>
+<option value="#basename">
+- basename
+</option>
+<option value="#path_extension">
+- path_extension
+</option>
+<option value="#Working_with_a_Bundle">
+Working with a Bundle
+</option>
+<option value="#bundle_resource">
+- bundle_resource
+</option>
+<option value="#bundle_InfoPlist">
+- bundle_InfoPlist
+</option>
+<option value="#File_Manipulations">
+File Manipulations
+</option>
+<option value="#item_exists">
+- item_exists
+</option>
+<option value="#item_exists_without_update">
+- item_exists_without_update
+</option>
+<option value="#exists">
+- exists
+</option>
+<option value="#rename_to">
+- rename_to
+</option>
+<option value="#copy_to">
+- copy_to
+</option>
+<option value="#copy_with_opts">
+- copy_with_opts
+</option>
+<option value="#move_to">
+- move_to
+</option>
+<option value="#resolve_alias">
+- resolve_alias
+</option>
+<option value="#into_trash">
+- into_trash
+</option>
+<option value="#remove">
+- remove
+</option>
+<option value="#Making_subfolders">
+Making subfolders
+</option>
+<option value="#make_folder">
+- make_folder
+</option>
+<option value="#make_path">
+- make_path
+</option>
+<option value="#Reading_and_Writing_File_Contents">
+Reading and Writing File Contents
+</option>
+<option value="#read_as_utf8">
+- read_as_utf8
+</option>
+<option value="#write_as_utf8">
+- write_as_utf8
+</option>
+<option value="#Parent_and_Children">
+Parent and Children
+</option>
+<option value="#parent_folder">
+- parent_folder
+</option>
+<option value="#child">
+- child
+</option>
+<option value="#unique_child">
+- unique_child
+</option>
+<option value="#each">
+- each
+</option>
+</select>
+			<div class="edit-script-link">
+				<a onclick="return runHelpScriptWithBundleRoot(this)" href="assets/editScript.scpt">Edit Script</a>
+			</div>
+		</div>
+		<!-- InstanceBeginEditable name="prev-next-item" --><div class="prev-next-item"><a href="../01_synopsis/index.html"><span class="navibar-prev">Synopsis</span></a>|<a href="../03_history/index.html"><span class="navibar-next">History</span></a></div><!-- InstanceEndEditable -->
+		<div id="contents">
+		<h1>XFile Reference</h1>
+<ul>
+<li>Version : 1.4</li>
+<li>Author : Tetsuro KURITA <a href="mailto:tkurita@mac.com">tkurita@mac.com</a></li>
+</ul>
+<h2 id="Constractors">Constractors</h2>
+<p>クラスオブジェクトから指定したファイルを参照した XFile のインスタンスを作ります。</p>
+
+<h3 id="make_with"><a href="pages/make_with.html">make_with</a></h3>
+<p>ファイルの参照から XFile のインスタンスを作ります。</p>
+
+<h3 id="make_with_pathinfo"><a href="pages/make_with_pathinfo.html">make_with_pathinfo</a></h3>
+<p><a href="help:openbook='PathInfo Help'">PathInfo</a> の返り値から XFile のインスタンスを生成します。</p>
+
+<h2 id="Make_a_New_Instance_with_Changing_Contents_of_an_Instance">Make a New Instance with Changing Contents of an Instance</h2>
+<p>既存のインスタンスの一部の内容を変更して、新しいインスタンスを生成します。</p>
+
+<h3 id="change_name"><a href="pages/change_name.html">change_name</a></h3>
+<p>参照するファイルのファイル名を変更した XFile をつくります。</p>
+
+<h3 id="change_folder"><a href="pages/change_folder.html">change_folder</a></h3>
+<p>参照するファイルのフォルダを変更した XFile をつくります。</p>
+
+<h3 id="change_path_extension"><a href="pages/change_path_extension.html">change_path_extension</a></h3>
+<p>参照するファイルの拡張子を変更した XFile をつくります。</p>
+
+<h2 id="Getting_a_File_Reference_form_an_Instance">Getting a File Reference form an Instance</h2>
+<p>XFile インスタンスが参照しているファイルへの参照を取得します。</p>
+
+<h3 id="as_alias"><a href="pages/as_alias.html">as_alias</a></h3>
+<p>エイリアスを取得します。</p>
+
+<h3 id="as_furl"><a href="pages/as_furl.html">as_furl</a></h3>
+<p>File URL クラスのファイル参照を取得します。</p>
+
+<h3 id="hfs_path"><a href="pages/hfs_path.html">hfs_path</a></h3>
+<p>HFS 形式のパスを取得します。</p>
+
+<h3 id="posix_path"><a href="pages/posix_path.html">posix_path</a></h3>
+<p>POSIX形式のパスを取得します。</p>
+
+<h3 id="normalized_posix_path"><a href="pages/normalized_posix_path.html">normalized_posix_path</a></h3>
+<p>パス文字列の最後の"/"を削除した POSIX パスを取得します。</p>
+
+<h2 id="Working_with_Attributes">Working with Attributes</h2>
+<h3 id="is_folder"><a href="pages/is_folder.html">is_folder</a></h3>
+<p>フォルダであるかどうか調べます。</p>
+
+<h3 id="is_package"><a href="pages/is_package.html">is_package</a></h3>
+<p>パッケージであるかどうか調べます。</p>
+
+<h3 id="is_alias"><a href="pages/is_alias.html">is_alias</a></h3>
+<p>エイリアスファイルであるかどうか調べます。</p>
+
+<h3 id="is_visible"><a href="pages/is_visible.html">is_visible</a></h3>
+<p>可視ファイル/ファイルであるかどうか</p>
+
+<h3 id="set_types"><a href="pages/set_types.html">set_types</a></h3>
+<p>クリエータコードとタイプコードを設定します。</p>
+
+<h3 id="info"><a href="pages/info.html">info</a></h3>
+<p>ファイルの情報をまとめて取得します。</p>
+
+<h3 id="re_info"><a href="pages/re_info.html">re_info</a></h3>
+<p>ファイルの情報をディスクシステムから再取得します。</p>
+
+<h2 id="Obtain_Path_Infomation">Obtain Path Infomation</h2>
+<h3 id="item_name"><a href="pages/item_name.html">item_name</a></h3>
+<p>ファイル/フォルダ名を取得します。</p>
+
+<h3 id="basename"><a href="pages/basename.html">basename</a></h3>
+<p>ベースネーム(ファイル名から拡張子をのぞいたもの)を取得します。</p>
+
+<h3 id="path_extension"><a href="pages/path_extension.html">path_extension</a></h3>
+<p>ファイル名の拡張子を取得します。</p>
+
+<h2 id="Working_with_a_Bundle">Working with a Bundle</h2>
+<h3 id="bundle_resource"><a href="pages/bundle_resource.html">bundle_resource</a></h3>
+<p>バンドルリソースに含まれているファイルを取得します。</p>
+
+<h3 id="bundle_InfoPlist"><a href="pages/bundle_InfoPlist.html">bundle_InfoPlist</a></h3>
+<p>バンドルのInfo.plistファイルの参照を取得します。</p>
+
+<h2 id="File_Manipulations">File Manipulations</h2>
+<h3 id="item_exists"><a href="pages/item_exists.html">item_exists</a></h3>
+<p>参照しているファイル/フォルダが存在するかどうか調べます。</p>
+
+<h3 id="item_exists_without_update"><a href="pages/item_exists_without_update.html">item_exists_without_update</a></h3>
+<p>参照しているファイル/フォルダが存在するかどうか調べます。</p>
+
+<h3 id="exists"><a href="pages/exists.html">exists</a></h3>
+<p><a href="pages/item_exists.html">item_exists</a> と同じです。参照しているファイル/フォルダが存在するかどうか調べます。</p>
+
+<h3 id="rename_to"><a href="pages/rename_to.html">rename_to</a></h3>
+<p>ファイル/フォルダ名を変更します。</p>
+
+<h3 id="copy_to"><a href="pages/copy_to.html">copy_to</a></h3>
+<p>ファイル/フォルダを指定した場所にコピーします。</p>
+
+<h3 id="copy_with_opts"><a href="pages/copy_with_opts.html">copy_with_opts</a></h3>
+<p>ファイル/フォルダを指定した場所にコピーします。いくつかのオプションを指定できます。</p>
+
+<h3 id="move_to"><a href="pages/move_to.html">move_to</a></h3>
+<p>ファイル/フォルダを指定した場所に移動します。</p>
+
+<h3 id="resolve_alias"><a href="pages/resolve_alias.html">resolve_alias</a></h3>
+<p>エイリアスファイルのオリジナルを求めます。</p>
+
+<h3 id="into_trash"><a href="pages/into_trash.html">into_trash</a></h3>
+<p>ゴミ箱に入れます</p>
+
+<h3 id="remove"><a href="pages/remove.html">remove</a></h3>
+<p>削除します</p>
+
+<h2 id="Making_subfolders">Making subfolders</h2>
+<h3 id="make_folder"><a href="pages/make_folder.html">make_folder</a></h3>
+<p>サブフォルダを作ります。</p>
+
+<h3 id="make_path"><a href="pages/make_path.html">make_path</a></h3>
+<p>設定されているファイルパスのフォルダを作ります。 </p>
+
+<h2 id="Reading_and_Writing_File_Contents">Reading and Writing File Contents</h2>
+<h3 id="read_as_utf8"><a href="pages/read_as_utf8.html">read_as_utf8</a></h3>
+<p>ファイルの内容を UTF-8 テキストとして読み込みます。</p>
+
+<h3 id="write_as_utf8"><a href="pages/write_as_utf8.html">write_as_utf8</a></h3>
+<p>ファイルに UTF-8 テキストを書き込みます。</p>
+
+<h2 id="Parent_and_Children">Parent and Children</h2>
+<h3 id="parent_folder"><a href="pages/parent_folder.html">parent_folder</a></h3>
+<p>XFile のインスタンスが参照しているファイル/フォルダを含むフォルダを取得します。</p>
+
+<h3 id="child"><a href="pages/child.html">child</a></h3>
+<p>フォルダ内のファイル/フォルダを相対パスを指定して取得します。</p>
+
+<h3 id="unique_child"><a href="pages/unique_child.html">unique_child</a></h3>
+<p>フォルダ内で他と名前が重複しない XFile インスタンスを生成します。</p>
+
+<h3 id="each"><a href="pages/each.html">each</a></h3>
+<p>フォルダ内のファイル/フォルダを引数にしてスクリプトオブジェクトの do ハンドラを繰り返し実行します。</p>
+
+		</div>
+		<!-- InstanceBeginEditable name="prev-next-item" --><div class="prev-next-item"><a href="../01_synopsis/index.html"><span class="navibar-prev">Synopsis</span></a>|<a href="../03_history/index.html"><span class="navibar-next">History</span></a></div><!-- InstanceEndEditable -->
+	</body>
 
 </html>

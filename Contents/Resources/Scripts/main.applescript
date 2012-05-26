@@ -528,7 +528,7 @@ Check whether the item referenced by the instance exists or not.
 <!-- begin locale ja -->
 ((<item_exists>)) とは違って、内部のファイル参照は更新されません。
 <!-- begin locale en -->
-The internal file reference will not be changed unlike ((<item_exists>).
+The internal file reference will not be changed unlike ((<item_exists>)).
 <!-- end locale -->
 @result 
 <!-- begin locale ja -->
