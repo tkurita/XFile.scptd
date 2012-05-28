@@ -1104,6 +1104,10 @@ on dump()
 	return posix_path()
 end dump
 
+on log
+	continue log dump()
+end log
+
 on debug()
 	boot (module loader) for me
 	set a_path to POSIX file "/Users/tkurita/Desktop/kasokuki.pdf"
