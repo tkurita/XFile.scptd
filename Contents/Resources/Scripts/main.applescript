@@ -248,12 +248,9 @@ end quoted_path
 <!-- begin locale en -->
 Check whether the item is a folder or not.
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-boolean : フォルダであれば true 
-<!-- begin locale en -->
-boolean : true if the the item is folder.
-<!-- end locale -->
+@result boolean : 
+<!-- begin locale ja -->フォルダであれば true 
+<!-- begin locale en -->true if the the item is folder.<!-- end locale -->
 *)
 on is_folder()
 	(*
@@ -273,12 +270,9 @@ end is_folder
 <!-- begin locale en -->
 Check whether the item is a package or not.
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-boolean : パッケージであれば true
-<!-- begin locale en -->
-boolean : true if the item is a package.
-<!-- end locale -->
+@result boolean :
+<!-- begin locale ja -->パッケージであれば true
+<!-- begin locale en -->true if the item is a package.<!-- end locale -->
 *)
 on is_package()
 	set info_rec to info()
@@ -291,12 +285,9 @@ end is_package
 <!-- begin locale en -->
 Check whether the item is an alias file or not.
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-boolean : エイリアスファイルであれば true
-<!-- begin locale en -->
-boolean : true if the item is an alias file.
-<!-- end locale -->
+@result boolean :
+<!-- begin locale ja -->エイリアスファイルであれば true
+<!-- begin locale en -->true if the item is an alias file.<!-- end locale -->
 *)
 on is_alias()
 	set info_rec to info()
@@ -309,12 +300,9 @@ end is_alias
 <!-- begin locale en -->
 Check whether the item is a symbolic link or not.
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-boolean : シンボリックリングであれば true
-<!-- begin locale en -->
-boolean : true if the item is a symbolic link
-<!-- end locale -->
+@result boolean : 
+<!-- begin locale ja -->シンボリックリングであれば true
+<!-- begin locale en -->true if the item is a symbolic link<!-- end locale -->
 *)
 on is_symlink()
 	try
@@ -331,12 +319,9 @@ end is_symlink
 <!-- begin locale en -->
 Check whether the item is visible or not.
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-boolean : 可視ファイル/フォルダであれば true
-<!-- begin locale en -->
-boolean : true if the item is visible.
-<!-- end locale -->
+@result boolean : 
+<!-- begin locale ja -->可視ファイル/フォルダであれば true
+<!-- begin locale en -->true if the item is visible.<!-- end locale -->
 *)
 on is_visible()
 	set info_rec to info()
@@ -387,12 +372,9 @@ info for コマンドを使用して情報を取得します。一度 info() を
 <!-- begin locale en -->
 Do "info for" command for the item. The result is cached and same value is returned at next calling info().
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-record : info for コマンドの実行結果
-<!-- begin locale en -->
-record : result of info for command
-<!-- end locale -->
+@result record : 
+<!-- begin locale ja -->info for コマンドの実行結果
+<!-- begin locale en -->result of info for command<!-- end locale -->
 *)
 on info()
 	if my _infoRecord is missing value then
@@ -414,13 +396,9 @@ info for コマンドを使用して情報を取得します。((<info>))() を�
 <!-- begin locale en -->
 Do "info for" command for the item and reset the cache of ((<info>))().
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-
-record : info for コマンドの実行結果
-<!-- begin locale en -->
-record : result of info for command
-<!-- end locale -->
+@result record :
+<!-- begin locale ja -->info for コマンドの実行結果
+<!-- begin locale en -->result of info for command<!-- end locale -->
 *)
 on re_info()
 	set my _infoRecord to info for as_furl()
@@ -531,12 +509,9 @@ Check whether the item referenced by the instance exists or not.
 A file reference stored in a instance is converted to alias class.
 Even if the class of the inner file reference already has been alias, the alias is reconstructed.
 <!-- end locale -->
-@result 
-<!-- begin locale ja -->
-boolean : 存在するのであれば true
-<!-- begin locale en -->
-boolean : true if the item exists.
-<!-- end locale -->
+@result boolean :
+<!-- begin locale ja -->存在するのであれば true
+<!-- begin locale en -->true if the item exists.<!-- end locale -->
 *)
 on item_exists()
 	return my _pathInfo's item_exists()
@@ -554,12 +529,9 @@ Check whether the item referenced by the instance exists or not.
 <!-- begin locale en -->
 The internal file reference will not be changed unlike ((<item_exists>)).
 <!-- end locale -->
-@result 
-<!-- begin locale ja -->
-boolean : 存在するのであれば true
-<!-- begin locale en -->
-boolean : true if the item exists.
-<!-- end locale -->
+@result boolean :
+<!-- begin locale ja -->存在するのであれば true
+<!-- begin locale en -->true if the item exists.<!-- end locale -->
 *)
 on item_exists_without_update()
 	return my _pathInfo's item_exists_without_update()
@@ -571,12 +543,9 @@ end item_exists_without_update
 <!-- begin locale en -->
 Synonym of ((<item_exists>)). Check whether the item referenced by the instance exists or not.
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-boolean : 存在するのであれば true
-<!-- begin locale en -->
-boolean : true if the item exists.
-<!-- end locale -->
+@result boolean : 
+<!-- begin locale ja -->存在するのであれば true
+<!-- begin locale en -->true if the item exists.<!-- end locale -->
 *)
 on exists
 	return item_exists()
@@ -622,12 +591,9 @@ Same name item in the destination is replaced.
 <!-- begin locale ja -->コピー先を参照している XFile のインスタンス。もしくは、ターゲットからの相対パス。
 <!-- begin locale en -->a XFile instance referencing the copy destination or a relative path.
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-script object : コピーしたファイル/フォルダの XFile インスタンス
-<!-- begin locale en -->
-script object : a XFile instance referencing copied item.
-<!-- end locale -->
+@result script object : 
+<!-- begin locale ja -->コピーしたファイル/フォルダの XFile インスタンス
+<!-- begin locale en -->a XFile instance referencing copied item.<!-- end locale -->
 *)
 on copy_to(a_destination)
 	return copy_with_opts(a_destination, missing value)
@@ -661,12 +627,9 @@ By passing options (a value of a record) as a second parameter, you can change t
 <!-- begin locale ja -->コピー先に
 <!-- begin locale en -->a XFile instance referencing the copy destination
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-script object : コピーしたファイル/フォルダの XFile インスタンス
-<!-- begin locale en -->
-script object : a XFile instance referencing copied item.
-<!-- end locale -->
+@result script object : 
+<!-- begin locale ja -->コピーしたファイル/フォルダの XFile インスタンス
+<!-- begin locale en -->a XFile instance referencing copied item.<!-- end locale -->
 *)
 on copy_with_opts(a_destination, opts)
 	-- cp : if source and destination are folders and the path of the source ends with "/", 
@@ -694,10 +657,10 @@ on copy_with_opts(a_destination, opts)
 			end if
 		end try
 	end if
+	
 	if class of a_destination is in {text, Unicode text, string} then
 		set a_destination to parent_folder()'s child(a_destination)
 	end if
-	
 	
 	if command is "cp" then
 		set com_opts to "-Rp"
@@ -855,12 +818,9 @@ missing value is returned, if failing to make a new folder
 <!-- begin locale ja -->フォルダ名
 <!-- begin locale en -->a name of new folder.
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-script object or missing value : 新しく作ったフォルダの XFile インスタンス。
-<!-- begin locale en -->
-script object or missing value : a XFile instance of newly created folder.
-<!-- end locale -->
+@result script object or missing value : 
+<!-- begin locale ja -->新しく作ったフォルダの XFile インスタンス。
+<!-- begin locale en -->a XFile instance of newly created folder.<!-- end locale -->
 *)
 on make_folder(folder_name)
 	if not (item_exists()) then
@@ -895,12 +855,9 @@ By passing a record of the following format, you can make folders with administr
 
 If you don't need to specify options, pass an empty list {}.
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-script object or missing value : 新しく作ったフォルダの XFile インスタンス。
-<!-- begin locale en -->
-script object or missing value : a XFile instance of newly created folder.
-<!-- end locale -->
+@result script object or missing value : 
+<!-- begin locale ja --> 新しく作ったフォルダの XFile インスタンス。
+<!-- begin locale en -->a XFile instance of newly created folder. <!-- end locale -->
 *)
 on make_path(opts)
 	set w_admin to false
@@ -961,12 +918,9 @@ XFile のインスタンスが参照しているファイル/フォルダを含�
 <!-- begin locale en -->
 Obtain a folder containing the item referenced by the XFile instance.
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-script object : 親フォルダの XFile インスタンス
-<!-- begin locale en -->
-script object : a XFile instance of the parent folder.
-<!-- end locale -->
+@result script object : 
+<!-- begin locale ja -->親フォルダの XFile インスタンス
+<!-- begin locale en -->A XFile instance of the parent folder.<!-- end locale -->
 *)
 on parent_folder()
 	return make_with_pathinfo(my _pathInfo's parent_folder())
@@ -988,12 +942,9 @@ If this methods is sent to non exsisting folder, missing value is returend.
 <!-- begin locale ja -->取得する項目のサブパス
 <!-- begin locale en -->sub path to obtain.
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-script object or missing value : XFile インスタンス
-<!-- begin locale en -->
-script object or missing value : a XFile instance
-<!-- end locale -->
+@result script object or missing value : 
+<!-- begin locale ja --> XFile インスタンス
+<!-- begin locale en -->a XFile instance <!-- end locale -->
 *)
 on child(subpath)
 	if item_exists_without_update() then
@@ -1034,12 +985,9 @@ If this methods is sent to non existing item, error number 1350 will be raised.
 <!-- begin locale en -->
 A candidate of a name to obtain unique item. If same name item exists, the candidate is modified.
 <!-- end locale -->
-@result
-<!-- begin locale ja -->
-script object : XFile インスタンス
-<!-- begin locale en -->
-script object : a XFile instance
-<!-- end locale -->
+@result script object :
+<!-- begin locale ja -->XFile インスタンス
+<!-- begin locale en -->a XFile instance<!-- end locale -->
 *)
 on unique_child(a_candidate)
 	if not is_folder() then
@@ -1118,13 +1066,12 @@ end each
 <!-- begin locale ja -->
 ターゲットを引数にとって、シェルコマンドを実行します。
 <!-- begin locale en -->
-run passed shell command taking the target as an argument.
+Run passed shell command taking the target as an argument.
 <!-- end locale -->
 @param a_command(text) : shell command
 @result text : 
 <!-- begin locale ja -->シェルコマンドの標準出力
-<!-- begin locale en -->standard output of the shell command
-<!-- end locale -->
+<!-- begin locale en -->standard output of the shell command<!-- end locale -->
 *)
 on perform_shell(a_command)
 	return do shell script a_command & space & quoted_path()
@@ -1137,12 +1084,14 @@ end perform_shell
 run test command taking the target as an argument.
 <!-- end locale -->
 @param option(text) : 
-<!-- begin locale ja -->test コマンドに与えるオプション。詳しくは test コマンドの man ページを見てください。
-<!-- begin locale en -->an option to passed to the test command. See the man page of the test command.
+<!-- begin locale ja -->
+test コマンドに与えるオプション。詳しくは test コマンドの man ページを見てください。
+<!-- begin locale en -->
+An option to passed to the test command. See the man page of the test command.
+<!-- end locale -->
 @result boolean : 
 <!-- begin locale ja -->test コマンドが成功したら true。
-<!-- begin locale en -->true if test command successfully exits.
-<!-- end locale -->
+<!-- begin locale en -->true if test command successfully exits.<!-- end locale -->
 *)
 on shell_test(option)
 	try

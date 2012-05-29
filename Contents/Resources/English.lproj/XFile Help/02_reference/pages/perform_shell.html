@@ -4,12 +4,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 	<head>
-		<title>item_exists_without_update</title>
+		<title>perform_shell</title>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<link href="../assets/default.css" type="text/css" rel="stylesheet" media="all" />
 		<link href="../assets/handler_page.css" type="text/css" rel="stylesheet" media="all" />
 		<link href="../assets/applescript.css" type="text/css" rel="stylesheet" media="all" />
-		<meta name="keywords" content="item_exists_without_update, XFile" />
+		<meta name="keywords" content="perform_shell, XFile" />
 		<script type="text/javascript" src="../assets/run_helpscript.js"></script>
 		<link href="../../" id="HelpBookRoot" />
 	</head>
@@ -27,23 +27,25 @@
 		</div>
 		<div id="contents">
 		<div class="elementTitle">
-<a id="item_exists_without_update" name="item_exists_without_update">item_exists_without_update</a>
+<a id="perform_shell" name="perform_shell">perform_shell</a>
 </div>
 <p class="sourceCode">
-<span class="userDefine">item_exists_without_update</span><span class="normal">()</span>
+<span class="userDefine">perform_shell</span><span class="normal">(</span><span class="userDefine">a_command</span><span class="normal">)</span>
 <a href="../assets/setClipboard.scpt" onclick="return runHelpScriptWithInnerText(this)">
 <img src="../assets/Clipboard24.png" alt="copy to clipboard" align="right" />
 </a></p>
-<p>Check whether the item referenced by the instance exists or not.</p>
+<p>Run passed shell command taking the target as an argument.</p>
 
-
-
-<p>The internal file reference will not be changed unlike <a href="item_exists.html">item_exists</a>.</p>
-
+<div class="subHeading">
+Parameters
+</div>
+<ul>
+<li>a_command(text) : shell command</li>
+</ul>
 <div class="subHeading">
 Result
 </div>
-<p>boolean :true if the item exists.</p>
+<p>text : standard output of the shell command</p>
 		</div>
 	</body>
 

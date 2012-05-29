@@ -4,12 +4,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 	<head>
-		<title>item_exists_without_update</title>
+		<title>shell_test</title>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<link href="../assets/default.css" type="text/css" rel="stylesheet" media="all" />
 		<link href="../assets/handler_page.css" type="text/css" rel="stylesheet" media="all" />
 		<link href="../assets/applescript.css" type="text/css" rel="stylesheet" media="all" />
-		<meta name="keywords" content="item_exists_without_update, XFile" />
+		<meta name="keywords" content="shell_test, XFile" />
 		<script type="text/javascript" src="../assets/run_helpscript.js"></script>
 		<link href="../../" id="HelpBookRoot" />
 	</head>
@@ -27,23 +27,28 @@
 		</div>
 		<div id="contents">
 		<div class="elementTitle">
-<a id="item_exists_without_update" name="item_exists_without_update">item_exists_without_update</a>
+<a id="shell_test" name="shell_test">shell_test</a>
 </div>
 <p class="sourceCode">
-<span class="userDefine">item_exists_without_update</span><span class="normal">()</span>
+<span class="userDefine">shell_test</span><span class="normal">(</span><span class="userDefine">option</span><span class="normal">)</span>
 <a href="../assets/setClipboard.scpt" onclick="return runHelpScriptWithInnerText(this)">
 <img src="../assets/Clipboard24.png" alt="copy to clipboard" align="right" />
 </a></p>
-<p>Check whether the item referenced by the instance exists or not.</p>
+<p>ターゲットを引数にとって、test コマンドを実行します。</p>
 
+<div class="subHeading">
+Parameters
+</div>
+<ul>
+<li>option(text) : 
 
-
-<p>The internal file reference will not be changed unlike <a href="item_exists.html">item_exists</a>.</p>
-
+test コマンドに与えるオプション。詳しくは test コマンドの man ページを見てください。
+</li>
+</ul>
 <div class="subHeading">
 Result
 </div>
-<p>boolean :true if the item exists.</p>
+<p>boolean : test コマンドが成功したら true。</p>
 		</div>
 	</body>
 
