@@ -291,7 +291,6 @@ Check whether the item is an alias file or not.
 <!-- begin locale en -->true if the item is an alias file.<!-- end locale -->
 *)
 on is_alias()
-	tell AppleScript to log "start is_alias"
 	set info_rec to info()
 	return alias of info_rec
 end is_alias
@@ -831,7 +830,6 @@ missing value is returned, if failing to make a new folder
 *)
 on make_folder(folder_name)
 	if not (item_exists()) then
-		log (my _pathInfo's as_text() & " does not exists.")
 		return missing value
 	end if
 	
