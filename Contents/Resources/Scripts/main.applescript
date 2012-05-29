@@ -720,18 +720,13 @@ Move the item referenced by the instance to specified location.
 <!-- begin locale en -->boolean : true if success.<!-- end locale -->
 *)
 on move_to(a_destination)
-	(*
-	if not item_exists() then
-		return false
-	end if
-	*)
+	item_exists() -- even if the item exists, broken symbolic file will return false.
 	(*
 	set is_folder_to to false
 	if a_destination's item_exists_without_update() then
 		set is_folder_to to a_destination's is_folder()
 	end if
 	*)
-	
 	set destination_path to quoted form of a_destination's posix_path()
 	set source_path to quoted form of posix_path()
 	do shell script "mv -f " & source_path & space & destination_path
