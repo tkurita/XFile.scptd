@@ -15,14 +15,14 @@ You should have received a copy of the GNU General Public License
 along with Foobar.  If not, see <http://www.gnu.org/licenses/> *)
 
 property name : "XFile"
-property version : "1.4"
+property version : "1.5b"
 
 property PathInfo : module
 
 
 (*!@title XFile Reference
 
-* Version : 1.4
+* Version : 1.5b
 * Author : Tetsuro KURITA ((<tkurita@mac.com>))
 
 @references
@@ -798,6 +798,10 @@ on resolve_alias()
 			return missing value
 		end try
 		return make_with(original_item)
+	else if is_symlink() then
+		set original_item to deep_copy()
+		original_item's item_exists()
+		return original_item
 	else
 		return a reference to me
 	end if
@@ -1109,6 +1113,47 @@ on each(a_script)
 		end if
 	end repeat
 end each
+
+(*!@group Working with Shell Commands *)
+
+(*!@abstruct
+<!-- begin locale ja -->
+ターゲットを引数にとって、シェルコマンドを実行します。
+<!-- begin locale en -->
+run passed shell command taking the target as an argument.
+<!-- end locale -->
+@param a_command(text) : shell command
+@result text : 
+<!-- begin locale ja -->シェルコマンドの標準出力
+<!-- begin locale en -->standard output of the shell command
+<!-- end locale -->
+*)
+on perform_shell(a_command)
+	return do shell script a_command & space & quoted_path()
+end perform_shell
+
+(*!@abstruct
+<!-- begin locale ja -->
+ターゲットを引数にとって、test コマンドを実行します。
+<!-- begin locale en -->
+run test command taking the target as an argument.
+<!-- end locale -->
+@param option(text) : 
+<!-- begin locale ja -->test コマンドに与えるオプション。詳しくは test コマンドの man ページを見てください。
+<!-- begin locale en -->an option to passed to the test command. See the man page of the test command.
+@result boolean : 
+<!-- begin locale ja -->test コマンドが成功したら true。
+<!-- begin locale en -->true if test command successfully exits.
+<!-- end locale -->
+*)
+on shell_test(option)
+	try
+		do shell script "test " & option & space & quoted_path()
+	on error
+		return false
+	end try
+	return true
+end shell_test
 
 (*== private **)
 
