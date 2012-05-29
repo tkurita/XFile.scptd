@@ -1111,6 +1111,11 @@ on each(a_script)
 end each
 
 (*== private **)
+
+on deep_copy()
+	return make_with_pathinfo(my _pathInfo's clone())
+end deep_copy
+
 on item_ref()
 	return my _pathInfo's item_ref()
 end item_ref
