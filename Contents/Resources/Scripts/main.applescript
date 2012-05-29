@@ -19,7 +19,6 @@ property version : "1.5b"
 
 property PathInfo : module
 
-
 (*!@title XFile Reference
 
 * Version : 1.5b
@@ -101,7 +100,6 @@ on make_with_pathinfo(path_info)
 	end script
 	return XFile
 end make_with_pathinfo
-
 
 
 (*!@group Make a New Instance with Changing Contents of an Instance
