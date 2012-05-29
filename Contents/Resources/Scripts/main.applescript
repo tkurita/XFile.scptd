@@ -720,9 +720,11 @@ Move the item referenced by the instance to specified location.
 <!-- begin locale en -->boolean : true if success.<!-- end locale -->
 *)
 on move_to(a_destination)
+	(*
 	if not item_exists() then
 		return false
 	end if
+	*)
 	(*
 	set is_folder_to to false
 	if a_destination's item_exists_without_update() then
