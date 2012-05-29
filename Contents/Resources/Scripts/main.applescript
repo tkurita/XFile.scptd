@@ -238,6 +238,10 @@ on normalized_posix_path()
 	return my _pathInfo's normalized_posix_path()
 end normalized_posix_path
 
+on quoted_path()
+	return my _pathInfo's posix_path()'s quoted form
+end quoted_path
+
 (*!@group Working with Attributes *)
 
 (*!@abstruct
@@ -300,6 +304,28 @@ on is_alias()
 	set info_rec to info()
 	return alias of info_rec
 end is_alias
+
+(*!@abstruct
+<!-- begin locale ja -->
+シンボリックリンクであるかどうか調べます。
+<!-- begin locale en -->
+Check whether the item is a symbolic link or not.
+<!-- end locale -->
+@result
+<!-- begin locale ja -->
+boolean : シンボリックリングであれば true
+<!-- begin locale en -->
+boolean : true if the item is a symbolic link
+<!-- end locale -->
+*)
+on is_symlink()
+	try
+		do shell script "test -L " & quoted_path()
+	on error
+		return false
+	end try
+	return true
+end is_symlink
 
 (*!@abstruct
 <!-- begin locale ja -->
