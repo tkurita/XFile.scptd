@@ -307,7 +307,7 @@ Check whether the item is a symbolic link or not.
 <!-- begin locale en -->true if the item is a symbolic link<!-- end locale -->
 *)
 on is_symlink()
-	if my _is_simlink is missing value then
+	if my _is_symlink is missing value then
 		try
 			do shell script "test -L " & quoted_path()
 			set my _is_symlink to true
@@ -315,7 +315,7 @@ on is_symlink()
 			set my _is_symlink to false
 		end try
 	end if
-	return my _is_simlink
+	return my _is_symlink
 end is_symlink
 
 (*!@abstruct
@@ -754,6 +754,15 @@ If the item referenced by the XFile instance is not an alias file, same instance
 @result script object or missing value
 *)
 on resolve_alias()
+	if is_symlink() then
+		set x_original to deep_copy()
+		if x_original's item_exists() then
+			return x_original
+		else
+			return missing value
+		end if
+	end if
+	
 	set info_rec to info()
 	if alias of info_rec then
 		try
@@ -764,14 +773,6 @@ on resolve_alias()
 			return missing value
 		end try
 		return make_with(original_item)
-	else if is_symlink() then
-		set original_item to deep_copy()
-		try
-			original_item's item_exists()
-		on error number 1350
-			return missing value
-		end try
-		return original_item
 	else
 		return a reference to me
 	end if
