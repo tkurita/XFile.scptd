@@ -1078,8 +1078,8 @@ Run passed shell command taking the target as an argument.
 <!-- begin locale ja -->シェルコマンドの標準出力
 <!-- begin locale en -->standard output of the shell command<!-- end locale -->
 *)
-on perform_shell(a_command)
-	return do shell script a_command & space & quoted_path()
+on perform_shell(a_command, post_command)
+	return do shell script a_command & space & quoted_path() & space & post_command
 end perform_shell
 
 (*!@abstruct
