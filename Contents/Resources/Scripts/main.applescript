@@ -97,6 +97,7 @@ on make_with_pathinfo(path_info)
 		property _pathInfo : path_info
 		property _infoRecord : missing value
 		property _prefer_posix : path_info's is_posix()
+		property _is_symlink : missing value
 	end script
 	return XFile
 end make_with_pathinfo
@@ -290,6 +291,7 @@ Check whether the item is an alias file or not.
 <!-- begin locale en -->true if the item is an alias file.<!-- end locale -->
 *)
 on is_alias()
+	tell AppleScript to log "start is_alias"
 	set info_rec to info()
 	return alias of info_rec
 end is_alias
@@ -305,12 +307,15 @@ Check whether the item is a symbolic link or not.
 <!-- begin locale en -->true if the item is a symbolic link<!-- end locale -->
 *)
 on is_symlink()
-	try
-		do shell script "test -L " & quoted_path()
-	on error
-		return false
-	end try
-	return true
+	if my _is_simlink is missing value then
+		try
+			do shell script "test -L " & quoted_path()
+			set my _is_symlink to true
+		on error
+			set my _is_symlink to false
+		end try
+	end if
+	return my _is_simlink
 end is_symlink
 
 (*!@abstruct
@@ -761,7 +766,11 @@ on resolve_alias()
 		return make_with(original_item)
 	else if is_symlink() then
 		set original_item to deep_copy()
-		original_item's item_exists()
+		try
+			original_item's item_exists()
+		on error number 1350
+			return missing value
+		end try
 		return original_item
 	else
 		return a reference to me
