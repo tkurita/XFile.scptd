@@ -15,13 +15,13 @@ You should have received a copy of the GNU General Public License
 along with Foobar.  If not, see <http://www.gnu.org/licenses/> *)
 
 property name : "XFile"
-property version : "1.5b"
+property version : "1.5"
 
 property PathInfo : module
 
 (*!@title XFile Reference
 
-* Version : 1.5b
+* Version : 1.5
 * Author : Tetsuro KURITA ((<tkurita@mac.com>))
 
 @references
@@ -1072,6 +1072,11 @@ end each
 ターゲットを引数にとって、シェルコマンドを実行します。
 <!-- begin locale en -->
 Run passed shell command taking the target as an argument.
+<!-- end locale -->
+@description
+<!-- begin locale ja -->
+シェルコマンドの&quot;%s&quot;をターゲットのパスに置き換えて実行します。
+<!-- begin locale en -->
 &quot;%s&quot; in the command will be replaced with the target's path.
 <!-- end locale -->
 @param a_command(text) : shell command including %s.
@@ -1080,8 +1085,8 @@ Run passed shell command taking the target as an argument.
 <!-- begin locale en -->standard output of the shell command<!-- end locale -->
 *)
 on perform_shell(a_command)
-	set a_path to normalized_posix_path()'s quoted form
-	return do shell script "$(printf " & a_command & space & a_path & ")"
+	set a_path to normalized_posix_path()'s quoted form's quoted form
+	return do shell script "eval $(printf " & a_command's quoted form & space & a_path & ")"
 end perform_shell
 
 (*!@abstruct
