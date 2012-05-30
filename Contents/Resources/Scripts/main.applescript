@@ -35,31 +35,14 @@ on prefer_posix(bool)
 end prefer_posix
 
 (*!@group Constractors
-<!-- begin locale ja -->
-クラスオブジェクトから指定したファイルを参照した XFile のインスタンスを作ります。
-<!-- begin locale en -->
-Making a new instance with a reference to a file from a class object.
-<!-- end locale -->
+Making a new instance with a reference to a file from the class object.
 *)
 
 (*!@abstruct 
-<!-- begin locale ja -->
-ファイルの参照から XFile のインスタンスを作ります。
-<!-- begin locale en -->
 Make a XFile instance with a file reference
-<!-- end locale -->
 @description
-<!-- begin locale ja -->
-ファイルへの参照として、HFS/POSIX 形式のパス文字列もしくはalias, File URLを受け付けます。
-
-<!-- begin locale en -->
 HFS/POSIX path, alias and file URL can be accepted as file specification.
-
-<!-- end locale -->
-@param file_ref (alias or Unicode text) : 
-<!-- begin locale ja -->HFS/POSIX 形式のパス文字列もしくはalias、File URL
-<!-- begin locale en -->a HFS/POSIX path, alias or File URL
-<!-- end locale -->
+@param file_ref (alias or Unicode text) : a HFS/POSIX path, alias or File URL
 @result script object : a new instance of XFile
 *)
 on make_with(file_ref)
@@ -79,15 +62,8 @@ on make_with(file_ref)
 end make_with
 
 (*!@abstruct
-<!-- begin locale ja -->
-((<PathInfo>)) の返り値から XFile のインスタンスを生成します。
-<!-- begin locale en -->
-Make a new instance with a record returned by ((<PathInfo>))
-<!-- end locale -->
-@param path_record (record) :
-<!-- begin locale ja -->PathInfo の返り値
-<!-- begin locale en -->a result of PathInfo
-<!-- end locale -->
+Make a new instance with a ((<PathInfo>)) instance.
+@param path_info (script) : a ((<PathInfo>)) instance.
 @result script object : a new instance of XFile
  *)
 on make_with_pathinfo(path_info)
@@ -104,23 +80,14 @@ end make_with_pathinfo
 
 
 (*!@group Make a New Instance with Changing Contents of an Instance
-<!-- begin locale ja -->
-既存のインスタンスの一部の内容を変更して、新しいインスタンスを生成します。
-<!-- begin locale en -->
+
+
 Making a new XFile instance with changing a part of the exisiting instance.
-<!-- end locale -->
 *)
 
 (*!@abstruct
-<!-- begin locale ja -->
-参照するファイルのファイル名を変更した XFile をつくります。
-<!-- begin locale en -->
 Make a new instance with changing file name of the instance
-<!-- end locale -->
-@param a_name (Unicode text or string) : 
-<!-- begin locale ja -->参照したいファイル名
-<!-- begin locale en -->a file name
-<!-- end locale -->
+@param a_name (Unicode text or string) : a file name
 @result script object : a new instance of XFile
 *)
 on change_name(a_name)
