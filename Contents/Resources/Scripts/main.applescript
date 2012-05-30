@@ -373,8 +373,11 @@ Obtain file information.
 @description
 <!-- begin locale ja -->
 info for コマンドを使用して情報を取得します。一度 info() を実行するとその結果は内部にキャッシュされます。
+size は取得しません。
 <!-- begin locale en -->
-Do "info for" command for the item. The result is cached and same value is returned at next calling info().
+Do &quot;info for&quot; command for the item.
+The result is cached and same value is returned at next calling info().
+size will not be included.
 <!-- end locale -->
 @result record : 
 <!-- begin locale ja -->info for コマンドの実行結果
@@ -387,6 +390,26 @@ on info()
 	end if
 	return my _infoRecord
 end info
+
+(*!@abstruct
+Obtain file information including its size.
+@description
+Do &quot;info for&quot; command for the item with &quot;size&quot; option. 
+The result is cached and same value is returned at next calling info_with_size() or ((<info>))().
+<!-- end locale -->
+@result record : 
+<!-- begin locale ja -->info for コマンドの実行結果
+<!-- begin locale en -->result of info for command<!-- end locale -->
+*)
+on info_with_size()
+	if my _infoRecord is missing value then
+		check_existance_raising_error()
+		set my _infoRecord to info for as_furl() with size
+	else if size of my _infoRecord is missing value then
+		set my _infoRecord to info for as_furl() with size
+	end if
+	return my _infoRecord
+end info_with_size
 
 (*!@abstruct
 <!-- begin locale ja -->
@@ -405,7 +428,12 @@ Do "info for" command for the item and reset the cache of ((<info>))().
 <!-- begin locale en -->result of info for command<!-- end locale -->
 *)
 on re_info()
-	set my _infoRecord to info for as_furl()
+	if (my _infoRecord is not missing value) and ¬
+		(size of my _infoRecord is not missing value) then
+		set my _infoRecord to info for as_furl() with size
+	else
+		set my _infoRecord to info for as_furl() without size
+	end if
 	return my _infoRecord
 end re_info
 
@@ -680,7 +708,7 @@ on copy_with_opts(a_destination, opts)
 			a_destination's remove()
 		else
 			if command is "cp" then
-				set is_folder_to to a_destination's shell_test("-d")
+				set is_folder_to to a_destination's is_folder()
 			end if
 		end if
 	end if
