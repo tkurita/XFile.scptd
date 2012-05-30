@@ -674,24 +674,26 @@ on copy_with_opts(a_destination, opts)
 	else if command is "ditto" then
 		set com_opts to "--rsrc"
 	end if
-	
 	set is_folder_to to false
 	if a_destination's item_exists() then
 		if (w_removing) then
 			a_destination's remove()
 		else
 			if command is "cp" then
-				set is_folder_to to a_destination's is_folder()
+				set is_folder_to to a_destination's shell_test("-d")
 			end if
 		end if
 	end if
+	
 	set destination_path to quoted form of a_destination's normalized_posix_path()
 	set source_path to quoted form of normalized_posix_path()
 	set a_command to command & space & com_opts & space & source_path & space & destination_path
 	do shell script a_command administrator privileges w_admin
+	(*
 	if is_folder_to then
 		return a_destination's child(item_name())
 	end if
+	*)
 	return a_destination
 end copy_with_opts
 
