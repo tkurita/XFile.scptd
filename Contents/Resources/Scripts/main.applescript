@@ -745,7 +745,7 @@ on move_to(a_destination)
 	try
 		do shell script "mv -f " & source_path & space & destination_path
 	on error msg
-		log msg
+		tell AppleScript to log msg
 		return false
 	end try
 	return true
