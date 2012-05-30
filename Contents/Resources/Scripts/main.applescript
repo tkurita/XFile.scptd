@@ -383,7 +383,7 @@ Do "info for" command for the item. The result is cached and same value is retur
 on info()
 	if my _infoRecord is missing value then
 		check_existance_raising_error()
-		set my _infoRecord to info for as_furl()
+		set my _infoRecord to info for as_furl() without size
 	end if
 	return my _infoRecord
 end info
@@ -689,11 +689,9 @@ on copy_with_opts(a_destination, opts)
 	set source_path to quoted form of normalized_posix_path()
 	set a_command to command & space & com_opts & space & source_path & space & destination_path
 	do shell script a_command administrator privileges w_admin
-	(*
 	if is_folder_to then
 		return a_destination's child(item_name())
 	end if
-	*)
 	return a_destination
 end copy_with_opts
 
