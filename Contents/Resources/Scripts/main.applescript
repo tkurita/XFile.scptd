@@ -1072,14 +1072,16 @@ end each
 ターゲットを引数にとって、シェルコマンドを実行します。
 <!-- begin locale en -->
 Run passed shell command taking the target as an argument.
+&quot;%s&quot; in the command will be replaced with the target's path.
 <!-- end locale -->
-@param a_command(text) : shell command
+@param a_command(text) : shell command including %s.
 @result text : 
 <!-- begin locale ja -->シェルコマンドの標準出力
 <!-- begin locale en -->standard output of the shell command<!-- end locale -->
 *)
-on perform_shell(a_command, post_command)
-	return do shell script a_command & space & quoted_path() & space & post_command
+on perform_shell(a_command)
+	set a_path to normalized_posix_path()'s quoted form
+	return do shell script "$(printf " & a_command & space & a_path & ")"
 end perform_shell
 
 (*!@abstruct
