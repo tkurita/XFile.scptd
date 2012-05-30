@@ -475,14 +475,6 @@ on path_extension()
 	return my _pathInfo's path_extension()
 end path_extension
 
-
-on update_cache()
-	if my _infoRecord is not missing value then
-		check_existance_raising_error()
-		set my _infoRecord to info for item_ref()
-	end if
-end update_cache
-
 (*!@group Working with a Bundle *)
 
 (*!@abstruct
