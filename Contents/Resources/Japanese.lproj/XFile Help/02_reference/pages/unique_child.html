@@ -34,25 +34,21 @@
 <a href="../assets/setClipboard.scpt" onclick="return runHelpScriptWithInnerText(this)">
 <img src="../assets/Clipboard24.png" alt="copy to clipboard" align="right" />
 </a></p>
-<p>フォルダ内で他と名前が重複しない XFile インスタンスを生成します。</p>
+<p>Obtain a XFile instance reference unique name item in the folder.</p>
 
 
-
-<p>フォルダでない XFile のインスタンスに対して実行すると、missing value が返ります。XFile のインスタンスがファイル参照が存在しなければ、error number 1350 が発生します。</p>
-
+<p>If the instance's file reference is not a folder, missing value will be returned.If this methods is sent to non existing item, error number 1350 will be raised.</p>
 <div class="subHeading">
 Parameters
 </div>
 <ul>
-<li>a_candidate(Unicode text or list) :
-
-取得したいファイル参照の名前の候補。既に存在する名前であれば変更が加えられます。
-</li>
+<li>a_candidate(text or list) :
+A candidate of a name to obtain unique item. If same name item exists, the candidate is modified.</li>
 </ul>
 <div class="subHeading">
 Result
 </div>
-<p>script object :XFile インスタンス</p>
+<p>script object : a XFile instance</p>
 		</div>
 	</body>
 

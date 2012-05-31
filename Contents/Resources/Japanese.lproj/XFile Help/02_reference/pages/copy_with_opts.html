@@ -34,32 +34,26 @@
 <a href="../assets/setClipboard.scpt" onclick="return runHelpScriptWithInnerText(this)">
 <img src="../assets/Clipboard24.png" alt="copy to clipboard" align="right" />
 </a></p>
-<p>ファイル/フォルダを指定した場所にコピーします。いくつかのオプションを指定できます。</p>
+<p>Copy the item to specified location with options.</p>
 
 
-
-<p>第２引数でオプション（ record クラスの値）を与えることにより、コピー操作のカスタマイズが行えます。オプションとしてあたえるレコードは、{with_replaceing : boolean, with_admin:boolean, with_replacing: boolean} というフォーマットです。値を指定しないラベルは省略可能です。</p>
+<p>By passing options (a value of a record) as a second parameter, you can change the behavior of copying.The format of the option record is {with_replaceing : boolean, with_admin:boolean, with_replacing: boolean}. You can ommit labels you don't required.</p>
 <ul>
-<li>with_replacing : コピー先にファイルがあった場合置き換えるかどうか。デフォルトは true。</li>
-<li>with_admin : 管理者権限でコピーします。デフォルトは false。</li>
-<li>with_removing : コピー先が存在する場合、コピー先を削除してからコピーを実行します。デフォルトは false。</li>
+<li>with_replacing : Copying with replacing the destination. The default is true.</li>
+<li>with_admin : Copying with administrator privileges. The default is false.</li>
+<li>with_removing : Copying after removing the destination. The default is false.</li>
 </ul>
-
 <div class="subHeading">
 Parameters
 </div>
 <ul>
-<li>a_destination (script object) : 
-コピー先を参照している XFile のインスタンスもしくは相対パス。
-</li>
-<li>opts ( record): 
-コピー先に
-</li>
+<li>a_destination (script object) : a XFile instance referencing the copy destination or a relative path.</li>
+<li>opts ( record): a XFile instance referencing the copy destination.</li>
 </ul>
 <div class="subHeading">
 Result
 </div>
-<p>script object : コピーしたファイル/フォルダの XFile インスタンス</p>
+<p>script object : a XFile instance referencing copied item.</p>
 		</div>
 	</body>
 

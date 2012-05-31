@@ -34,18 +34,16 @@
 <a href="../assets/setClipboard.scpt" onclick="return runHelpScriptWithInnerText(this)">
 <img src="../assets/Clipboard24.png" alt="copy to clipboard" align="right" />
 </a></p>
-<p>設定されているファイルパスのフォルダを作ります。 </p>
+<p>Make folders which indicating the path of the XFile instance.</p>
 
 
-
-<p>mkdir -p を使ってつくります。失敗したら missing valueが返ります。引数にオプションとしてレコードをあたえ動作をカスタマイズできます。</p>
+<p>Using a shell command "mkdir -p".By passing a record of the following format, you can make folders with administrator privileges.</p>
 <p>{with_admin : boolean}</p>
-<p>今のところ、with_admin だけです。true を、与えると管理者権限でフォルダを作ります。オプションを指定しない場合は、空のリスト {} を与えてください。</p>
-
+<p>If you don't need to specify options, pass an empty list {}.</p>
 <div class="subHeading">
 Result
 </div>
-<p>script object or missing value :  新しく作ったフォルダの XFile インスタンス。</p>
+<p>script object or missing value : a XFile instance of newly created folder.</p>
 		</div>
 	</body>
 

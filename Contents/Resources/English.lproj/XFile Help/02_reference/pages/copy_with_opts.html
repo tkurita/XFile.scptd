@@ -37,24 +37,18 @@
 <p>Copy the item to specified location with options.</p>
 
 
-
-<p>By passing options (a value of a record) as a second parameter, you can change the behavior of copying. The format of the option record is {with_replaceing : boolean, with_admin:boolean, with_replacing: boolean}. You can ommit labels you don't required.</p>
+<p>By passing options (a value of a record) as a second parameter, you can change the behavior of copying.The format of the option record is {with_replaceing : boolean, with_admin:boolean, with_replacing: boolean}. You can ommit labels you don't required.</p>
 <ul>
 <li>with_replacing : Copying with replacing the destination. The default is true.</li>
 <li>with_admin : Copying with administrator privileges. The default is false.</li>
 <li>with_removing : Copying after removing the destination. The default is false.</li>
 </ul>
-
 <div class="subHeading">
 Parameters
 </div>
 <ul>
-<li>a_destination (script object) : 
-a XFile instance referencing the copy destination or a relative path.
-</li>
-<li>opts ( record): 
-a XFile instance referencing the copy destination
-</li>
+<li>a_destination (script object) : a XFile instance referencing the copy destination or a relative path.</li>
+<li>opts ( record): a XFile instance referencing the copy destination.</li>
 </ul>
 <div class="subHeading">
 Result
