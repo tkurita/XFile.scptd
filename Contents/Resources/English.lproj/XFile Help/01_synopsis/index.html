@@ -37,76 +37,83 @@
           <csobj csref="../../../_Components/sample-code.html" occur="5" t="Component">
             <div class="sourceCode">
               <div>
-                <span class="langKeyword">property</span> <span class="userDefine">XFile</span> <span class="normal">:</span> <span class="appKeyword">module</span></div>
+                <span class="langKeyword">property</span> <span class="userDefine">XFile</span><span class="normal"> : </span><span class="additionCommandName">module</span></div>
               <br />
               <div>
-                <span class="appKeyword">boot</span> <span class="normal">(</span><span class="appKeyword">module loader</span><span class="normal">)</span> <span class="appKeyword">for</span> <span class="langKeyword">me</span></div>
+                <span class="additionCommandName">boot</span><span class="normal"> (</span><span class="additionCommandName">module loader</span><span class="normal">) </span><span class="additionCommandName">for</span> <span class="langKeyword">me</span></div>
               <br />
               <div>
-                <span class="normal">(*</span><span class="comment">== Make a New Instance </span><span class="normal">*)</span></div>
+                <span class="comment">(*== Make a New Instance *)</span></div>
               <div>
-                <span class="langKeyword">set</span> <span class="userDefine">a_xfile</span> <span class="langKeyword">to</span> <span class="userDefine">XFile</span><span class="normal">'s</span> <span class="userDefine">make_with</span><span class="normal">(</span><span class="appKeyword">alias</span> <span class="normal">&quot;Macintosh HD:Users:&quot;)</span></div>
+                <span class="langKeyword">set</span> <span class="userDefine">a_xfile</span> <span class="langKeyword">to</span> <span class="userDefine">XFile</span><span class="normal">'s </span><span class="userDefine">make_with</span><span class="normal">(&quot;/Users&quot;)</span></div>
               <div>
-                <span class="langKeyword">set</span> <span class="userDefine">a_xfile</span> <span class="langKeyword">to</span> <span class="userDefine">XFile</span><span class="normal">'s</span> <span class="userDefine">make_with</span><span class="normal">(&quot;/Users&quot;)</span></div>
+                <span class="langKeyword">set</span> <span class="userDefine">home_folder</span> <span class="langKeyword">to</span> <span class="userDefine">XFile</span><span class="normal">'s </span><span class="userDefine">make_with</span><span class="normal">(</span><span class="additionCommandName">path to</span> <span class="additionEnumeratedValue">home folder</span><span class="normal">)</span></div>
               <br />
               <div>
-                <span class="normal">(*</span><span class="comment">== Obtain File Infomation </span><span class="normal">*)</span></div>
+                <span class="comment">(*== Obtain File Infomation *)</span></div>
               <div>
-                <span class="appKeyword">log</span> <span class="userDefine">a_xfile</span><span class="normal">'s</span> <span class="userDefine">is_folder</span><span class="normal">()</span> <span class="normal">--</span><span class="comment"> true</span></div>
+                <span class="commandName">log</span> <span class="userDefine">a_xfile</span><span class="normal">'s </span><span class="userDefine">is_folder</span><span class="normal">() </span><span class="comment">-- true</span></div>
               <div>
-                <span class="appKeyword">log</span> <span class="userDefine">a_xfile</span><span class="normal">'s</span> <span class="userDefine">is_package</span><span class="normal">()</span> <span class="normal">--</span><span class="comment"> false</span></div>
+                <span class="commandName">log</span> <span class="userDefine">a_xfile</span><span class="normal">'s </span><span class="userDefine">is_package</span><span class="normal">() </span><span class="comment">-- false</span></div>
               <div>
-                <span class="appKeyword">log</span> <span class="userDefine">a_xfile</span><span class="normal">'s</span> <span class="userDefine">item_name</span><span class="normal">()</span> <span class="normal">--</span><span class="comment"> &quot;Users&quot;</span></div>
+                <span class="commandName">log</span> <span class="userDefine">a_xfile</span><span class="normal">'s </span><span class="userDefine">item_name</span><span class="normal">() </span><span class="comment">-- &quot;Users&quot;</span></div>
               <br />
               <div>
-                <span class="normal">(*</span><span class="comment">== Obtain Parent and Child </span><span class="normal">*)</span></div>
+                <span class="comment">(*== Obtain Parent and Child *)</span></div>
               <div>
-                <span class="appKeyword">log</span> <span class="userDefine">a_xfile</span><span class="normal">'s</span> <span class="userDefine">parent_folder</span><span class="normal">()'s</span> <span class="userDefine">hfs_path</span><span class="normal">()</span> <span class="normal">--</span><span class="comment"> &quot;Macintosh HD:&quot;</span></div>
+                <span class="commandName">log</span> <span class="userDefine">home_folder</span><span class="normal">'s </span><span class="userDefine">parent_folder</span><span class="normal">()'s </span><span class="userDefine">posix_path</span><span class="normal">()</span></div>
               <div>
-                <span class="appKeyword">log</span> <span class="userDefine">a_xfile</span><span class="normal">'s</span> <span class="userDefine">child</span><span class="normal">(&quot;tkurita&quot;)'s</span> <span class="userDefine">hfs_path</span><span class="normal">()</span> <span class="normal">--</span><span class="comment"> &quot;Macintosh HD:Users:tkurita&quot;</span></div>
+                <span class="comment">-- &quot;/Users&quot;</span></div>
               <div>
-                <span class="appKeyword">log</span> <span class="userDefine">a_xfile</span><span class="normal">'s</span> <span class="userDefine">child</span><span class="normal">(&quot;tkurita:Documents&quot;)'s</span> <span class="userDefine">hfs_path</span><span class="normal">()</span></div>
+                <span class="commandName">log</span> <span class="userDefine">home_folder</span><span class="normal">'s </span><span class="userDefine">child</span><span class="normal">(&quot;Documents&quot;)'s </span><span class="userDefine">posix_path</span><span class="normal">()</span></div>
               <div>
-                <span class="normal">--</span><span class="comment"> &quot;Macintosh HD:Users:tkurita:Documents&quot;</span></div>
+                <span class="comment">-- &quot;/Users/tkurita/Documents&quot;</span></div>
               <div>
-                <span class="appKeyword">log</span> <span class="userDefine">a_xfile</span><span class="normal">'s</span> <span class="userDefine">unique_child</span><span class="normal">(&quot;tkurita&quot;)'s</span> <span class="userDefine">hfs_path</span><span class="normal">()</span></div>
+                <span class="commandName">log</span> <span class="userDefine">home_folder</span><span class="normal">'s </span><span class="userDefine">child</span><span class="normal">(&quot;Library/Scripts&quot;)'s </span><span class="userDefine">posix_path</span><span class="normal">()</span></div>
               <div>
-                <span class="normal">--</span><span class="comment">&quot;Macintosh HD:Users:tkurita 2&quot;</span></div>
+                <span class="comment">-- &quot;/Users/tkurita/Library/Scripts&quot;</span></div>
+              <div>
+                <span class="commandName">log</span> <span class="userDefine">home_folder</span><span class="normal">'s </span><span class="userDefine">unique_child</span><span class="normal">(&quot;Documents&quot;)'s </span><span class="userDefine">posix_path</span><span class="normal">()</span></div>
+              <div>
+                <span class="comment">--&quot;/Users/tkurita/Documents 2&quot;</span></div>
               <br />
               <div>
-                <span class="normal">(*</span><span class="comment">== Read and Write </span><span class="normal">*)</span></div>
+                <span class="comment">(*== Read and Write *)</span></div>
               <div>
-                <span class="langKeyword">set</span> <span class="userDefine">home_folder</span> <span class="langKeyword">to</span> <span class="userDefine">XFile</span><span class="normal">'s</span> <span class="userDefine">make_with</span><span class="normal">(</span><span class="appKeyword">path to</span> <span class="appKeyword">home folder</span><span class="normal">)</span></div>
+                <span class="langKeyword">set</span> <span class="userDefine">test_file</span> <span class="langKeyword">to</span> <span class="userDefine">home_folder</span><span class="normal">'s </span><span class="userDefine">child</span><span class="normal">(&quot;testfile&quot;)</span></div>
               <div>
-                <span class="langKeyword">set</span> <span class="userDefine">test_file</span> <span class="langKeyword">to</span> <span class="userDefine">home_folder</span><span class="normal">'s</span> <span class="userDefine">child</span><span class="normal">(&quot;testfile&quot;)</span></div>
+                <span class="userDefine">test_file</span><span class="normal">'s </span><span class="userDefine">write_as_utf8</span><span class="normal">(&quot;new data&quot;)</span></div>
               <div>
-                <span class="userDefine">test_file</span><span class="normal">'s</span> <span class="userDefine">write_as_utf8</span><span class="normal">(&quot;new data&quot;)</span></div>
-              <div>
-                <span class="appKeyword">log</span> <span class="userDefine">test_file</span><span class="normal">'s</span> <span class="userDefine">read_as_utf8</span><span class="normal">()</span> <span class="normal">--</span><span class="comment"> &quot;new data&quot;</span></div>
+                <span class="commandName">log</span> <span class="userDefine">test_file</span><span class="normal">'s </span><span class="userDefine">read_as_utf8</span><span class="normal">() </span><span class="comment">-- &quot;new data&quot;</span></div>
               <br />
               <div>
-                <span class="normal">(*</span><span class="comment">== File Manipulations </span><span class="normal">*)</span></div>
+                <span class="comment">(*== File Manipulations *)</span></div>
               <div>
-                <span class="appKeyword">log</span> <span class="userDefine">test_file</span><span class="normal">'s</span> <span class="userDefine">item_exists</span><span class="normal">()</span> <span class="normal">--</span><span class="comment">true</span></div>
+                <span class="commandName">log</span> <span class="userDefine">test_file</span><span class="normal">'s </span><span class="userDefine">item_exists</span><span class="normal">() </span><span class="comment">--true</span></div>
               <br />
               <div>
-                <span class="langKeyword">set</span> <span class="userDefine">test_file2</span> <span class="langKeyword">to</span> <span class="userDefine">test_file</span><span class="normal">'s</span> <span class="userDefine">copy_to</span><span class="normal">(</span><span class="userDefine">home_folder</span><span class="normal">'s</span> <span class="userDefine">child</span><span class="normal">(&quot;testfile2&quot;))</span></div>
+                <span class="langKeyword">set</span> <span class="userDefine">test_file2</span> <span class="langKeyword">to</span> <span class="userDefine">test_file</span><span class="normal">'s </span><span class="userDefine">copy_to</span><span class="normal">(</span><span class="userDefine">home_folder</span><span class="normal">'s </span><span class="userDefine">child</span><span class="normal">(&quot;testfile2&quot;))</span></div>
               <div>
-                <span class="appKeyword">log</span> <span class="userDefine">test_file2</span><span class="normal">'s</span> <span class="userDefine">hfs_path</span><span class="normal">()</span> <span class="normal">--</span><span class="comment">Macintosh HD:Users:tkurita:testfile2</span></div>
+                <span class="commandName">log</span> <span class="userDefine">test_file2</span><span class="normal">'s </span><span class="userDefine">posix_path</span><span class="normal">() </span><span class="comment">-- &quot;/Users/tkurita/testfile2&quot;</span></div>
               <br />
               <div>
-                <span class="userDefine">test_file2</span><span class="normal">'s</span> <span class="userDefine">move_to</span><span class="normal">(</span><span class="userDefine">home_folder</span><span class="normal">'s</span> <span class="userDefine">child</span><span class="normal">(&quot;Documents&quot;))</span></div>
+                <span class="userDefine">test_file2</span><span class="normal">'s </span><span class="userDefine">move_to</span><span class="normal">(</span><span class="userDefine">home_folder</span><span class="normal">'s </span><span class="userDefine">child</span><span class="normal">(&quot;Documents&quot;))</span></div>
               <div>
-                <span class="appKeyword">log</span> <span class="userDefine">test_file2</span><span class="normal">'s</span> <span class="userDefine">hfs_path</span><span class="normal">()</span> <span class="normal">--</span><span class="comment"> &quot;Macintosh HD:Users:tkurita:Documents:testfile2&quot;</span></div>
+                <span class="commandName">log</span> <span class="userDefine">test_file2</span><span class="normal">'s </span><span class="userDefine">posix_path</span><span class="normal">() </span><span class="comment">-- &quot;/Users/tkurita/Documents/testfile2&quot;</span></div>
               <br />
               <div>
-                <span class="userDefine">test_file2</span><span class="normal">'s</span> <span class="userDefine">into_trash</span><span class="normal">()</span></div>
+                <span class="userDefine">test_file2</span><span class="normal">'s </span><span class="userDefine">into_trash</span><span class="normal">()</span></div>
               <div>
-                <span class="appKeyword">log</span> <span class="userDefine">test_file2</span><span class="normal">'s</span> <span class="userDefine">hfs_path</span><span class="normal">()</span> <span class="normal">--</span><span class="comment"> &quot;Macintosh HD:Users:tkurita:.Trash:testfile2&quot;</span></div>
+                <span class="commandName">log</span> <span class="userDefine">test_file2</span><span class="normal">'s </span><span class="userDefine">posix_path</span><span class="normal">() </span><span class="comment">-- &quot;/Users/tkurita/.Trash/testfile2&quot;</span></div>
               <div>
-                <span class="userDefine">test_file</span><span class="normal">'s</span> <span class="userDefine">into_trash</span><span class="normal">()</span></div>
+                <span class="userDefine">test_file</span><span class="normal">'s </span><span class="userDefine">into_trash</span><span class="normal">()</span></div>
+              <br />
+              <div>
+                <span class="comment">(*== Working with Shell Commands *)</span></div>
+              <div>
+                <span class="commandName">log</span> <span class="userDefine">test_file</span><span class="normal">'s </span><span class="userDefine">perform_shell</span><span class="normal">(&quot;cat %s&quot;) </span><span class="comment">-- &quot;new data&quot;</span></div>
               <div class="scriptButton">
-                <input type="button" value="XFile Sample" onclick="location.href='applescript://com.apple.scripteditor?action=new%26script=property%20XFile%20:%20module%0D%0Dboot%20(module%20loader)%20for%20me%0D%0D(*==%20Make%20a%20New%20Instance%20*)%0Dset%20a_xfile%20to%20XFile%27s%20make_with(alias%20%22Macintosh%20HD:Users:%22)%0Dset%20a_xfile%20to%20XFile%27s%20make_with(%22/Users%22)%0D%0D(*==%20Obtain%20File%20Infomation%20*)%0Dlog%20a_xfile%27s%20is_folder()%20--%20true%0Dlog%20a_xfile%27s%20is_package()%20--%20false%0Dlog%20a_xfile%27s%20item_name()%20--%20%22Users%22%0D%0D(*==%20Obtain%20Parent%20and%20Child%20*)%0Dlog%20a_xfile%27s%20parent_folder()%27s%20hfs_path()%20--%20%22Macintosh%20HD:%22%0Dlog%20a_xfile%27s%20child(%22tkurita%22)%27s%20hfs_path()%20--%20%22Macintosh%20HD:Users:tkurita%22%0Dlog%20a_xfile%27s%20child(%22tkurita:Documents%22)%27s%20hfs_path()%0D--%20%22Macintosh%20HD:Users:tkurita:Documents%22%0Dlog%20a_xfile%27s%20unique_child(%22tkurita%22)%27s%20hfs_path()%0D--%22Macintosh%20HD:Users:tkurita%202%22%0D%0D(*==%20Read%20and%20Write%20*)%0Dset%20home_folder%20to%20XFile%27s%20make_with(path%20to%20home%20folder)%0Dset%20test_file%20to%20home_folder%27s%20child(%22testfile%22)%0Dtest_file%27s%20write_as_utf8(%22new%20data%22)%0Dlog%20test_file%27s%20read_as_utf8()%20--%20%22new%20data%22%0D%0D(*==%20File%20Manipulations%20*)%0Dlog%20test_file%27s%20item_exists()%20--true%0D%0Dset%20test_file2%20to%20test_file%27s%20copy_to(home_folder%27s%20child(%22testfile2%22))%0Dlog%20test_file2%27s%20hfs_path()%20--Macintosh%20HD:Users:tkurita:testfile2%0D%0Dtest_file2%27s%20move_to(home_folder%27s%20child(%22Documents%22))%0Dlog%20test_file2%27s%20hfs_path()%20--%20%22Macintosh%20HD:Users:tkurita:Documents:testfile2%22%0D%0Dtest_file2%27s%20into_trash()%0Dlog%20test_file2%27s%20hfs_path()%20--%20%22Macintosh%20HD:Users:tkurita:.Trash:testfile2%22%0Dtest_file%27s%20into_trash()%0D'" /></div>
+                <input type="button" value="sample" onclick="document.location = this.src" src="applescript://com.apple.scripteditor?action=new%26script=property%20XFile%20:%20module%0D%0Dboot%20(module%20loader)%20for%20me%0D%0D(*==%20Make%20a%20New%20Instance%20*)%0Dset%20a_xfile%20to%20XFile%27s%20make_with(%22/Users%22)%0Dset%20home_folder%20to%20XFile%27s%20make_with(path%20to%20home%20folder)%0D%0D(*==%20Obtain%20File%20Infomation%20*)%0Dlog%20a_xfile%27s%20is_folder()%20--%20true%0Dlog%20a_xfile%27s%20is_package()%20--%20false%0Dlog%20a_xfile%27s%20item_name()%20--%20%22Users%22%0D%0D(*==%20Obtain%20Parent%20and%20Child%20*)%0Dlog%20home_folder%27s%20parent_folder()%27s%20posix_path()%0D--%20%22/Users%22%0Dlog%20home_folder%27s%20child(%22Documents%22)%27s%20posix_path()%0D--%20%22/Users/tkurita/Documents%22%0Dlog%20home_folder%27s%20child(%22Library/Scripts%22)%27s%20posix_path()%0D--%20%22/Users/tkurita/Library/Scripts%22%0Dlog%20home_folder%27s%20unique_child(%22Documents%22)%27s%20posix_path()%0D--%22/Users/tkurita/Documents%202%22%0D%0D(*==%20Read%20and%20Write%20*)%0Dset%20test_file%20to%20home_folder%27s%20child(%22testfile%22)%0Dtest_file%27s%20write_as_utf8(%22new%20data%22)%0Dlog%20test_file%27s%20read_as_utf8()%20--%20%22new%20data%22%0D%0D(*==%20File%20Manipulations%20*)%0Dlog%20test_file%27s%20item_exists()%20--true%0D%0Dset%20test_file2%20to%20test_file%27s%20copy_to(home_folder%27s%20child(%22testfile2%22))%0Dlog%20test_file2%27s%20posix_path()%20--%20%22/Users/tkurita/testfile2%22%0D%0Dtest_file2%27s%20move_to(home_folder%27s%20child(%22Documents%22))%0Dlog%20test_file2%27s%20posix_path()%20--%20%22/Users/tkurita/Documents/testfile2%22%0D%0Dtest_file2%27s%20into_trash()%0Dlog%20test_file2%27s%20posix_path()%20--%20%22/Users/tkurita/.Trash/testfile2%22%0Dtest_file%27s%20into_trash()%0D%0D(*==%20Working%20with%20Shell%20Commands%20*)%0Dlog%20test_file%27s%20perform_shell(%22cat%20%25s%22)%20--%20%22new%20data%22%0D" /></div>
             </div>
           </csobj>
         <!-- InstanceEndEditable --></div>
