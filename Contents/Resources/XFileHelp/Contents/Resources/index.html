@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>XFile Reference</title>
+		<meta name="AppleTitle" content="XFile Reference" />
+
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link href="assets/default.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="assets/applescript.css" type="text/css" rel="stylesheet" media="all" />
+		<meta name="keywords" content="XFile, AppleScript" />
+		<script type="text/javascript" src="assets-helpbook/run_helpscript.js"></script>
+		<script type="text/javascript" src="assets/navibar-jump.js"></script>
+        <link id="helpviewer-handler-helper" href="assets-helpbook/helpviewer-handler-helper.scpt" />
+        <script type="text/javascript" src="assets-helpbook/helpviewer-handler-enable.js"></script>
+        <link href="./" id="HelpBookRoot" />
+	</head>
+
+	<body>
+		<div id="navi-bar">
+			<div class="edit-script-link">
+				<a onclick="return runHelpScriptWithBundleRoot(this)" href="assets-helpbook/editScript.scpt">Edit Script</a>
+			</div>
+			<div class="left-contents">
+			<div class="to-root">
+				<!-- InstanceBeginEditable name="to-root" --><!-- InstanceEndEditable -->
+			</div>
+			<select onchange="navibarJump(this)">
+<option value="">
+§
+</option>
+<option value="#Example">
+Example
+</option>
+<option value="#Constractors">
+Constractors
+</option>
+<option value="#make_with">
+- make_with
+</option>
+<option value="#make_with_pathinfo">
+- make_with_pathinfo
+</option>
+<option value="#Make_a_New_Instance_with_Changing_Contents_of_an_Instance">
+Make a New Instance with Changing Contents of an Instance
+</option>
+<option value="#change_name">
+- change_name
+</option>
+<option value="#change_folder">
+- change_folder
+</option>
+<option value="#change_path_extension">
+- change_path_extension
+</option>
+<option value="#Getting_a_File_Reference_form_an_Instance">
+Getting a File Reference form an Instance
+</option>
+<option value="#as_alias">
+- as_alias
+</option>
+<option value="#as_furl">
+- as_furl
+</option>
+<option value="#hfs_path">
+- hfs_path
+</option>
+<option value="#posix_path">
+- posix_path
+</option>
+<option value="#normalized_posix_path">
+- normalized_posix_path
+</option>
+<option value="#Working_with_Attributes">
+Working with Attributes
+</option>
+<option value="#is_folder">
+- is_folder
+</option>
+<option value="#is_package">
+- is_package
+</option>
+<option value="#is_alias">
+- is_alias
+</option>
+<option value="#is_symlink">
+- is_symlink
+</option>
+<option value="#is_visible">
+- is_visible
+</option>
+<option value="#set_types">
+- set_types
+</option>
+<option value="#info">
+- info
+</option>
+<option value="#info_with_size">
+- info_with_size
+</option>
+<option value="#re_info">
+- re_info
+</option>
+<option value="#Obtain_Path_Infomation">
+Obtain Path Infomation
+</option>
+<option value="#item_name">
+- item_name
+</option>
+<option value="#basename">
+- basename
+</option>
+<option value="#path_extension">
+- path_extension
+</option>
+<option value="#volume_name">
+- volume_name
+</option>
+<option value="#Working_with_a_Bundle">
+Working with a Bundle
+</option>
+<option value="#bundle_resource">
+- bundle_resource
+</option>
+<option value="#bundle_InfoPlist">
+- bundle_InfoPlist
+</option>
+<option value="#File_Manipulations">
+File Manipulations
+</option>
+<option value="#item_exists">
+- item_exists
+</option>
+<option value="#item_exists_without_update">
+- item_exists_without_update
+</option>
+<option value="#exists">
+- exists
+</option>
+<option value="#rename_to">
+- rename_to
+</option>
+<option value="#copy_to">
+- copy_to
+</option>
+<option value="#copy_with_opts">
+- copy_with_opts
+</option>
+<option value="#move_to">
+- move_to
+</option>
+<option value="#move_with_replacing">
+- move_with_replacing
+</option>
+<option value="#resolve_alias">
+- resolve_alias
+</option>
+<option value="#into_trash">
+- into_trash
+</option>
+<option value="#remove">
+- remove
+</option>
+<option value="#Making_subfolders">
+Making subfolders
+</option>
+<option value="#make_folder">
+- make_folder
+</option>
+<option value="#make_path">
+- make_path
+</option>
+<option value="#Reading_and_Writing_File_Contents">
+Reading and Writing File Contents
+</option>
+<option value="#read_as_utf8">
+- read_as_utf8
+</option>
+<option value="#write_as_utf8">
+- write_as_utf8
+</option>
+<option value="#Parent_and_Children">
+Parent and Children
+</option>
+<option value="#parent_folder">
+- parent_folder
+</option>
+<option value="#child">
+- child
+</option>
+<option value="#unique_child">
+- unique_child
+</option>
+<option value="#each">
+- each
+</option>
+<option value="#Working_with_Shell_Commands">
+Working with Shell Commands
+</option>
+<option value="#perform_shell">
+- perform_shell
+</option>
+<option value="#shell_test">
+- shell_test
+</option>
+</select>
+			</div>
+		</div>
+		<!-- InstanceBeginEditable name="prev-next-item" --><!-- InstanceEndEditable -->
+		<div id="contents">
+		<h1>XFile Reference</h1>
+<ul>
+<li>Version : 1.7.1</li>
+<li>Author : Kurita Tetsuro <a href="mailto:scriptfactory@mac.com">scriptfactory@mac.com</a></li>
+<li>Requirements : OS X 10.9 or later</li>
+<li><a href="http://www.script-factory.net/XModules/XFile/en/index.html">Home page</a> || <a href="http://www.script-factory.net/XModules/XFile/changelog.html">ChangeLog</a> || <a href="https://github.com/tkurita/XFile.scptd">Repository</a> </li>
+</ul>
+<p>XFile provides unified object oriented interface to file operation (moving, removing, geting attributes and so on).Functions of file operations of AppleScript world is given by Scrpting Additions, Finder, System Events and shell commnads. It is cumbersome to find a proper way, because implemeted locations of functions are distributed.XFile wraps these components and introduces a file object for unified object oriented interface.</p>
+<h2 id="Example">Example</h2>
+<div class="sourceCode">
+<div class="scriptButton">
+    <input type="button" value="Open this script" onclick="document.location = this.src" src="applescript://com.apple.scripteditor?action=new&amp;script=use%20XFile%20:%20script%20%22XFile%22%0Duse%20scripting%20additions%0D%0D(*%20Make%20a%20New%20Instance%20*)%0Dset%20a_xfile%20to%20XFile%27s%20make_with(%22/Users%22)%0Dset%20home_folder%20to%20XFile%27s%20make_with(path%20to%20home%20folder)%0D%0D(*%20Obtain%20File%20Infomation%20*)%0Dlog%20a_xfile%27s%20is_folder()%20--%20true%0Dlog%20a_xfile%27s%20is_package()%20--%20false%0Dlog%20a_xfile%27s%20item_name()%20--%20%22Users%22%0D%0D(*%20Obtain%20Parent%20and%20Child%20*)%0Dlog%20home_folder%27s%20parent_folder()%27s%20posix_path()%0D--%20%22/Users%22%0Dlog%20home_folder%27s%20child(%22Documents%22)%27s%20posix_path()%0D--%20%22/Users/yourhome/Documents%22%0Dlog%20home_folder%27s%20child(%22Library/Scripts%22)%27s%20posix_path()%0D--%20%22/Users/yourhome/Library/Scripts%22%0Dlog%20home_folder%27s%20unique_child(%22Documents%22)%27s%20posix_path()%0D--%22/Users/yourhome/Documents%202%22%0D%0D(*%20Read%20and%20Write%20*)%0Dset%20test_file%20to%20home_folder%27s%20child(%22testfile%22)%0Dtest_file%27s%20write_as_utf8(%22new%20data%22)%0Dlog%20test_file%27s%20read_as_utf8()%20--%20%22new%20data%22%0D%0D(*%20File%20Manipulations%20*)%0Dlog%20test_file%27s%20item_exists()%20--true%0D%0Dset%20test_file2%20to%20test_file%27s%20copy_to(home_folder%27s%20child(%22testfile2%22))%0Dlog%20test_file2%27s%20posix_path()%20--%20%22/Users/yourhome/testfile2%22%0D%0Dtest_file2%27s%20move_to(home_folder%27s%20child(%22Documents%22))%0Dlog%20test_file2%27s%20posix_path()%20--%20%22/Users/yourhome/Documents/testfile2%22%0D%0Dtest_file2%27s%20into_trash()%0Dlog%20test_file2%27s%20posix_path()%20--%20%22/Users/yourhome/.Trash/testfile2%22%0Dtest_file%27s%20into_trash()%0D%0D(*%20Working%20with%20Shell%20Commands%20*)%0Dlog%20test_file%27s%20perform_shell(%22cat%20%25s%22)%20--%20%22new%20data%22" />
+</div><div>
+<span class="langKeyword">use</span> <span class="userDefine">XFile</span><span class="normal"> : </span><span class="className">script</span><span class="normal"> &quot;XFile&quot;</span>
+</div>
+<div>
+<span class="langKeyword">use</span> <span class="className">scripting additions</span>
+</div>
+<br />
+<div>
+<span class="comment">(* Make a New Instance *)</span>
+</div>
+<div>
+<span class="langKeyword">set</span> <span class="userDefine">a_xfile</span> <span class="langKeyword">to</span> <span class="userDefine">XFile's</span> <span class="userDefine">make_with</span><span class="normal">(&quot;/Users&quot;)</span>
+</div>
+<div>
+<span class="langKeyword">set</span> <span class="userDefine">home_folder</span> <span class="langKeyword">to</span> <span class="userDefine">XFile's</span> <span class="userDefine">make_with</span><span class="normal">(</span><span class="additionCommandName">path to</span> <span class="additionEnumeratedValue">home folder</span><span class="normal">)</span>
+</div>
+<br />
+<div>
+<span class="comment">(* Obtain File Infomation *)</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">a_xfile's</span> <span class="userDefine">is_folder</span><span class="normal">() </span><span class="comment">-- true</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">a_xfile's</span> <span class="userDefine">is_package</span><span class="normal">() </span><span class="comment">-- false</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">a_xfile's</span> <span class="userDefine">item_name</span><span class="normal">() </span><span class="comment">-- &quot;Users&quot;</span>
+</div>
+<br />
+<div>
+<span class="comment">(* Obtain Parent and Child *)</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">home_folder's</span> <span class="userDefine">parent_folder</span><span class="normal">()'s </span><span class="userDefine">posix_path</span><span class="normal">()</span>
+</div>
+<div>
+<span class="comment">-- &quot;/Users&quot;</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">home_folder's</span> <span class="userDefine">child</span><span class="normal">(&quot;Documents&quot;)'s </span><span class="userDefine">posix_path</span><span class="normal">()</span>
+</div>
+<div>
+<span class="comment">-- &quot;/Users/yourhome/Documents&quot;</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">home_folder's</span> <span class="userDefine">child</span><span class="normal">(&quot;Library/Scripts&quot;)'s </span><span class="userDefine">posix_path</span><span class="normal">()</span>
+</div>
+<div>
+<span class="comment">-- &quot;/Users/yourhome/Library/Scripts&quot;</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">home_folder's</span> <span class="userDefine">unique_child</span><span class="normal">(&quot;Documents&quot;)'s </span><span class="userDefine">posix_path</span><span class="normal">()</span>
+</div>
+<div>
+<span class="comment">--&quot;/Users/yourhome/Documents 2&quot;</span>
+</div>
+<br />
+<div>
+<span class="comment">(* Read and Write *)</span>
+</div>
+<div>
+<span class="langKeyword">set</span> <span class="userDefine">test_file</span> <span class="langKeyword">to</span> <span class="userDefine">home_folder's</span> <span class="userDefine">child</span><span class="normal">(&quot;testfile&quot;)</span>
+</div>
+<div>
+<span class="userDefine">test_file's</span> <span class="userDefine">write_as_utf8</span><span class="normal">(&quot;new data&quot;)</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">test_file's</span> <span class="userDefine">read_as_utf8</span><span class="normal">() </span><span class="comment">-- &quot;new data&quot;</span>
+</div>
+<br />
+<div>
+<span class="comment">(* File Manipulations *)</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">test_file's</span> <span class="userDefine">item_exists</span><span class="normal">() </span><span class="comment">--true</span>
+</div>
+<br />
+<div>
+<span class="langKeyword">set</span> <span class="userDefine">test_file2</span> <span class="langKeyword">to</span> <span class="userDefine">test_file's</span> <span class="userDefine">copy_to</span><span class="normal">(</span><span class="userDefine">home_folder's</span> <span class="userDefine">child</span><span class="normal">(&quot;testfile2&quot;))</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">test_file2's</span> <span class="userDefine">posix_path</span><span class="normal">() </span><span class="comment">-- &quot;/Users/yourhome/testfile2&quot;</span>
+</div>
+<br />
+<div>
+<span class="userDefine">test_file2's</span> <span class="userDefine">move_to</span><span class="normal">(</span><span class="userDefine">home_folder's</span> <span class="userDefine">child</span><span class="normal">(&quot;Documents&quot;))</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">test_file2's</span> <span class="userDefine">posix_path</span><span class="normal">() </span><span class="comment">-- &quot;/Users/yourhome/Documents/testfile2&quot;</span>
+</div>
+<br />
+<div>
+<span class="userDefine">test_file2's</span> <span class="userDefine">into_trash</span><span class="normal">()</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">test_file2's</span> <span class="userDefine">posix_path</span><span class="normal">() </span><span class="comment">-- &quot;/Users/yourhome/.Trash/testfile2&quot;</span>
+</div>
+<div>
+<span class="userDefine">test_file's</span> <span class="userDefine">into_trash</span><span class="normal">()</span>
+</div>
+<br />
+<div>
+<span class="comment">(* Working with Shell Commands *)</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">test_file's</span> <span class="userDefine">perform_shell</span><span class="normal">(&quot;cat %s&quot;) </span><span class="comment">-- &quot;new data&quot;</span>
+</div>
+</div>
+<h2 id="Constractors">Constractors</h2>
+<p>Making a new instance with a reference to a file from the class object.</p>
+<h3 id="make_with"><a href="pages/make_with.html">make_with</a></h3>
+<p>Make a XFile instance with a file reference</p>
+<h3 id="make_with_pathinfo"><a href="pages/make_with_pathinfo.html">make_with_pathinfo</a></h3>
+<p>Make a new instance with a <a href="help:openbook='net.script-factory.PathInfo.help'">PathInfo</a> instance.</p>
+<h2 id="Make_a_New_Instance_with_Changing_Contents_of_an_Instance">Make a New Instance with Changing Contents of an Instance</h2>
+<p>Making a new XFile instance with changing a part of the exisiting instance.</p>
+<h3 id="change_name"><a href="pages/change_name.html">change_name</a></h3>
+<p>Make a new instance with changing file name of the instance</p>
+<h3 id="change_folder"><a href="pages/change_folder.html">change_folder</a></h3>
+<p>Make a new instance with changing folder of the instance</p>
+<h3 id="change_path_extension"><a href="pages/change_path_extension.html">change_path_extension</a></h3>
+<p>Make a new instance with changing path extension of the instance</p>
+<h2 id="Getting_a_File_Reference_form_an_Instance">Getting a File Reference form an Instance</h2>
+<p>Obtain a reference to a file which XFile reference to.</p>
+<h3 id="as_alias"><a href="pages/as_alias.html">as_alias</a></h3>
+<p>Obtain a reference to a file as alias class</p>
+<h3 id="as_furl"><a href="pages/as_furl.html">as_furl</a></h3>
+<p>Obtain a reference to a file as File URL class</p>
+<h3 id="hfs_path"><a href="pages/hfs_path.html">hfs_path</a></h3>
+<p>Obtain HFS path</p>
+<h3 id="posix_path"><a href="pages/posix_path.html">posix_path</a></h3>
+<p>Obtain POSIX path</p>
+<h3 id="normalized_posix_path"><a href="pages/normalized_posix_path.html">normalized_posix_path</a></h3>
+<p>Obtain POSIX path which does not end with "/".</p>
+<h2 id="Working_with_Attributes">Working with Attributes</h2>
+<h3 id="is_folder"><a href="pages/is_folder.html">is_folder</a></h3>
+<p>Check whether the item is a folder or not.</p>
+<h3 id="is_package"><a href="pages/is_package.html">is_package</a></h3>
+<p>Check whether the item is a package or not.</p>
+<h3 id="is_alias"><a href="pages/is_alias.html">is_alias</a></h3>
+<p>Check whether the item is an alias file or not.</p>
+<h3 id="is_symlink"><a href="pages/is_symlink.html">is_symlink</a></h3>
+<p>Check whether the item is a symbolic link or not.</p>
+<h3 id="is_visible"><a href="pages/is_visible.html">is_visible</a></h3>
+<p>Check whether the item is visible or not.</p>
+<h3 id="set_types"><a href="pages/set_types.html">set_types</a></h3>
+<p>Set creator code and type code to the item.</p>
+<h3 id="info"><a href="pages/info.html">info</a></h3>
+<p>Obtain file information.</p>
+<h3 id="info_with_size"><a href="pages/info_with_size.html">info_with_size</a></h3>
+<p>Obtain file information including its size.</p>
+<h3 id="re_info"><a href="pages/re_info.html">re_info</a></h3>
+<p>Obtain file information again.</p>
+<h2 id="Obtain_Path_Infomation">Obtain Path Infomation</h2>
+<h3 id="item_name"><a href="pages/item_name.html">item_name</a></h3>
+<p>Obtain the name of the item referenced by the instance </p>
+<h3 id="basename"><a href="pages/basename.html">basename</a></h3>
+<p>Obtain the base name (a name which does not include path extension) of the item referenced by the instance.</p>
+<h3 id="path_extension"><a href="pages/path_extension.html">path_extension</a></h3>
+<p>Obtain path extension of the item referenced by the instance.</p>
+<h3 id="volume_name"><a href="pages/volume_name.html">volume_name</a></h3>
+<p>Obtain the volume name of the item referenced by the instance.</p>
+<h2 id="Working_with_a_Bundle">Working with a Bundle</h2>
+<h3 id="bundle_resource"><a href="pages/bundle_resource.html">bundle_resource</a></h3>
+<p>Obtain an item which is in the bundle resource folder.</p>
+<h3 id="bundle_InfoPlist"><a href="pages/bundle_InfoPlist.html">bundle_InfoPlist</a></h3>
+<p>Obtain a reference to Info.plist of the bundle.</p>
+<h2 id="File_Manipulations">File Manipulations</h2>
+<h3 id="item_exists"><a href="pages/item_exists.html">item_exists</a></h3>
+<p>Check whether the item referenced by the instance exists or not.</p>
+<h3 id="item_exists_without_update"><a href="pages/item_exists_without_update.html">item_exists_without_update</a></h3>
+<p>Check whether the item referenced by the instance exists or not.</p>
+<h3 id="exists"><a href="pages/exists.html">exists</a></h3>
+<p>Synonym of <a href="pages/item_exists.html">item_exists</a>. Check whether the item referenced by the instance exists or not.</p>
+<h3 id="rename_to"><a href="pages/rename_to.html">rename_to</a></h3>
+<p>Rename an item which referenced by the XFile instance.</p>
+<h3 id="copy_to"><a href="pages/copy_to.html">copy_to</a></h3>
+<p>Copy the item to specified location</p>
+<h3 id="copy_with_opts"><a href="pages/copy_with_opts.html">copy_with_opts</a></h3>
+<p>Copy the item to specified location with options.</p>
+<h3 id="move_to"><a href="pages/move_to.html">move_to</a></h3>
+<p>Move the item referenced by the instance to specified location.</p>
+<h3 id="move_with_replacing"><a href="pages/move_with_replacing.html">move_with_replacing</a></h3>
+<p>Move the item referenced by the instance to specified location.</p>
+<h3 id="resolve_alias"><a href="pages/resolve_alias.html">resolve_alias</a></h3>
+<p>Resolving original item of a alias file.</p>
+<h3 id="into_trash"><a href="pages/into_trash.html">into_trash</a></h3>
+<p>Put into trash.</p>
+<h3 id="remove"><a href="pages/remove.html">remove</a></h3>
+<p>Remove the item referd from the target XFile instance.</p>
+<h2 id="Making_subfolders">Making subfolders</h2>
+<h3 id="make_folder"><a href="pages/make_folder.html">make_folder</a></h3>
+<p>Make a sub folder.</p>
+<h3 id="make_path"><a href="pages/make_path.html">make_path</a></h3>
+<p>Make folders which indicating the path of the XFile instance.</p>
+<h2 id="Reading_and_Writing_File_Contents">Reading and Writing File Contents</h2>
+<h3 id="read_as_utf8"><a href="pages/read_as_utf8.html">read_as_utf8</a></h3>
+<p>Read file contents as UTF-8 encoded text.</p>
+<h3 id="write_as_utf8"><a href="pages/write_as_utf8.html">write_as_utf8</a></h3>
+<p>Write data into the file as UTF-8 encoded text.</p>
+<h2 id="Parent_and_Children">Parent and Children</h2>
+<h3 id="parent_folder"><a href="pages/parent_folder.html">parent_folder</a></h3>
+<p>Obtain a folder containing the item referenced by the XFile instance.</p>
+<h3 id="child"><a href="pages/child.html">child</a></h3>
+<p>Obtain an item in the folder with specifying a sub path from the target.</p>
+<h3 id="unique_child"><a href="pages/unique_child.html">unique_child</a></h3>
+<p>Obtain a XFile instance reference unique name item in the folder.</p>
+<h3 id="each"><a href="pages/each.html">each</a></h3>
+<p>Call do handler of given script object with each item in the folder as an argument.</p>
+<h2 id="Working_with_Shell_Commands">Working with Shell Commands</h2>
+<h3 id="perform_shell"><a href="pages/perform_shell.html">perform_shell</a></h3>
+<p>Run passed shell command taking the target as an argument.</p>
+<h3 id="shell_test"><a href="pages/shell_test.html">shell_test</a></h3>
+<p>Run test command taking the target as an argument.</p>
+		</div>
+		<!-- InstanceBeginEditable name="prev-next-item" --><!-- InstanceEndEditable -->
+	</body>
+
+</html>
