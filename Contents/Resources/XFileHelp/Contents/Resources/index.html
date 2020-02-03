@@ -76,8 +76,8 @@ Getting a File Reference form an Instance
 <option value="#Working_with_Attributes">
 Working with Attributes
 </option>
-<option value="#UTI">
-- UTI
+<option value="#type_identifier">
+- type_identifier
 </option>
 <option value="#is_folder">
 - is_folder
@@ -215,7 +215,7 @@ Working with Shell Commands
 		<div id="contents">
 		<h1>XFile Reference</h1>
 <ul>
-<li>Version : 1.7.1</li>
+<li>Version : 1.7.2</li>
 <li>Author : Kurita Tetsuro <a href="mailto:scriptfactory@mac.com">scriptfactory@mac.com</a></li>
 <li>Requirements : OS X 10.9 or later</li>
 <li><a href="http://www.script-factory.net/XModules/XFile/en/index.html">Home page</a> || <a href="http://www.script-factory.net/XModules/XFile/changelog.html">ChangeLog</a> || <a href="https://github.com/tkurita/XFile.scptd">Repository</a> </li>
@@ -224,7 +224,7 @@ Working with Shell Commands
 <h2 id="Example">Example</h2>
 <div class="sourceCode">
 <div class="scriptButton">
-    <input type="button" value="Open this script" onclick="document.location = this.src" src="applescript://com.apple.scripteditor?action=new&amp;script=use%20XFile%20:%20script%20%22XFile%22%0Duse%20scripting%20additions%0D%0D(*%20Make%20a%20New%20Instance%20*)%0Dset%20a_xfile%20to%20XFile%27s%20make_with(%22/Users%22)%0Dset%20home_folder%20to%20XFile%27s%20make_with(path%20to%20home%20folder)%0D%0D(*%20Obtain%20File%20Infomation%20*)%0Dlog%20a_xfile%27s%20is_folder()%20--%20true%0Dlog%20a_xfile%27s%20is_package()%20--%20false%0Dlog%20a_xfile%27s%20item_name()%20--%20%22Users%22%0D%0D(*%20Obtain%20Parent%20and%20Child%20*)%0Dlog%20home_folder%27s%20parent_folder()%27s%20posix_path()%0D--%20%22/Users%22%0Dlog%20home_folder%27s%20child(%22Documents%22)%27s%20posix_path()%0D--%20%22/Users/yourhome/Documents%22%0Dlog%20home_folder%27s%20child(%22Library/Scripts%22)%27s%20posix_path()%0D--%20%22/Users/yourhome/Library/Scripts%22%0Dlog%20home_folder%27s%20unique_child(%22Documents%22)%27s%20posix_path()%0D--%22/Users/yourhome/Documents%202%22%0D%0D(*%20Read%20and%20Write%20*)%0Dset%20test_file%20to%20home_folder%27s%20child(%22testfile%22)%0Dtest_file%27s%20write_as_utf8(%22new%20data%22)%0Dlog%20test_file%27s%20read_as_utf8()%20--%20%22new%20data%22%0D%0D(*%20File%20Manipulations%20*)%0Dlog%20test_file%27s%20item_exists()%20--true%0D%0Dset%20test_file2%20to%20test_file%27s%20copy_to(home_folder%27s%20child(%22testfile2%22))%0Dlog%20test_file2%27s%20posix_path()%20--%20%22/Users/yourhome/testfile2%22%0D%0Dtest_file2%27s%20move_to(home_folder%27s%20child(%22Documents%22))%0Dlog%20test_file2%27s%20posix_path()%20--%20%22/Users/yourhome/Documents/testfile2%22%0D%0Dtest_file2%27s%20into_trash()%0Dlog%20test_file2%27s%20posix_path()%20--%20%22/Users/yourhome/.Trash/testfile2%22%0Dtest_file%27s%20into_trash()%0D%0D(*%20Working%20with%20Shell%20Commands%20*)%0Dlog%20test_file%27s%20perform_shell(%22cat%20%25s%22)%20--%20%22new%20data%22" />
+    <input type="button" value="Open this script" onclick="document.location = this.src" src="applescript://com.apple.scripteditor?action=new&amp;script=use%20XFile%20:%20script%20%22XFile%22%0Duse%20scripting%20additions%0D%0D(*%20Make%20a%20New%20Instance%20*)%0Dset%20a_xfile%20to%20XFile%27s%20make_with(%22/Users%22)%0Dset%20home_folder%20to%20XFile%27s%20make_with(path%20to%20home%20folder)%0D%0D(*%20Obtain%20File%20Infomation%20*)%0Dlog%20a_xfile%27s%20type_identifier()%20--%20%22public.folder%22%0Dlog%20a_xfile%27s%20is_folder()%20--%20true%0Dlog%20a_xfile%27s%20is_package()%20--%20false%0Dlog%20a_xfile%27s%20item_name()%20--%20%22Users%22%0D%0D(*%20Obtain%20Parent%20and%20Child%20*)%0Dlog%20home_folder%27s%20parent_folder()%27s%20posix_path()%0D--%20%22/Users%22%0Dlog%20home_folder%27s%20child(%22Documents%22)%27s%20posix_path()%0D--%20%22/Users/yourhome/Documents%22%0Dlog%20home_folder%27s%20child(%22Library/Scripts%22)%27s%20posix_path()%0D--%20%22/Users/yourhome/Library/Scripts%22%0Dlog%20home_folder%27s%20unique_child(%22Documents%22)%27s%20posix_path()%0D--%22/Users/yourhome/Documents%202%22%0D%0D(*%20Read%20and%20Write%20*)%0Dset%20test_file%20to%20home_folder%27s%20child(%22testfile%22)%0Dtest_file%27s%20write_as_utf8(%22new%20data%22)%0Dlog%20test_file%27s%20read_as_utf8()%20--%20%22new%20data%22%0D%0D(*%20File%20Manipulations%20*)%0Dlog%20test_file%27s%20item_exists()%20--true%0D%0Dset%20test_file2%20to%20test_file%27s%20copy_to(home_folder%27s%20child(%22testfile2%22))%0Dlog%20test_file2%27s%20posix_path()%20--%20%22/Users/yourhome/testfile2%22%0D%0Dtest_file2%27s%20move_to(home_folder%27s%20child(%22Documents%22))%0Dlog%20test_file2%27s%20posix_path()%20--%20%22/Users/yourhome/Documents/testfile2%22%0D%0Dtest_file2%27s%20into_trash()%0Dlog%20test_file2%27s%20posix_path()%20--%20%22/Users/yourhome/.Trash/testfile2%22%0Dtest_file%27s%20into_trash()%0D%0D(*%20Working%20with%20Shell%20Commands%20*)%0Dlog%20test_file%27s%20perform_shell(%22cat%20%25s%22)%20--%20%22new%20data%22%0D" />
 </div><div>
 <span class="langKeyword">use</span> <span class="userDefine">XFile</span><span class="normal"> : </span><span class="className">script</span><span class="normal"> &quot;XFile&quot;</span>
 </div>
@@ -244,6 +244,9 @@ Working with Shell Commands
 <br />
 <div>
 <span class="comment">(* Obtain File Infomation *)</span>
+</div>
+<div>
+<span class="commandName">log</span> <span class="userDefine">a_xfile's</span> <span class="userDefine">type_identifier</span><span class="normal">() </span><span class="comment">-- &quot;public.folder&quot;</span>
 </div>
 <div>
 <span class="commandName">log</span> <span class="userDefine">a_xfile's</span> <span class="userDefine">is_folder</span><span class="normal">() </span><span class="comment">-- true</span>
@@ -361,7 +364,7 @@ Working with Shell Commands
 <h3 id="normalized_posix_path"><a href="pages/normalized_posix_path.html">normalized_posix_path</a></h3>
 <p>Obtain POSIX path which does not end with "/".</p>
 <h2 id="Working_with_Attributes">Working with Attributes</h2>
-<h3 id="UTI"><a href="pages/UTI.html">UTI</a></h3>
+<h3 id="type_identifier"><a href="pages/type_identifier.html">type_identifier</a></h3>
 <p>Obtain uniform type identifier (UTI) of the item </p>
 <h3 id="is_folder"><a href="pages/is_folder.html">is_folder</a></h3>
 <p>Check whether the item is a folder or not.</p>
