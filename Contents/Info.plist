@@ -11,7 +11,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.7.2</string>
 	<key>CFBundleVersion</key>
-	<string>17</string>
+	<string>18</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright 2007-2020, Kurita Tetsuro</string>
 	<key>WindowState</key>
@@ -29,7 +29,7 @@
 		<key>positionOfDivider</key>
 		<real>577</real>
 		<key>savedFrame</key>
-		<string>294 150 943 715 0 0 1440 877 </string>
+		<string>476 144 943 715 0 0 1440 877 </string>
 		<key>selectedTab</key>
 		<string>log</string>
 	</dict>
