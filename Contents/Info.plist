@@ -9,9 +9,9 @@
 	<key>CFBundleIdentifier</key>
 	<string>net.script-factory.XFile</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.7.2</string>
+	<string>1.8</string>
 	<key>CFBundleVersion</key>
-	<string>18</string>
+	<string>19</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright 2007-2020, Kurita Tetsuro</string>
 	<key>WindowState</key>
