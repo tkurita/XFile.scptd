@@ -33,5 +33,7 @@
 		<key>selectedTab</key>
 		<string>log</string>
 	</dict>
+	<key>OSAAppleScriptObjCEnabled</key>
+	<true/>
 </dict>
 </plist>
