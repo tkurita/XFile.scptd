@@ -14,6 +14,8 @@
 	<string>27</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright 2007-2020, Kurita Tetsuro</string>
+	<key>OSAAppleScriptObjCEnabled</key>
+	<true/>
 	<key>WindowState</key>
 	<dict>
 		<key>bundleDividerCollapsed</key>
@@ -33,7 +35,5 @@
 		<key>selectedTab</key>
 		<string>log</string>
 	</dict>
-	<key>OSAAppleScriptObjCEnabled</key>
-	<true/>
 </dict>
 </plist>
